@@ -74,7 +74,7 @@ const Projects = () => {
                 href="https://ortentic-app.vercel.app/"
                 style={{ color: darkMode && "#fff" }}
               >
-                <p>Live Prototype Demo (under construction)</p>
+                <p>Live Demo (under construction)</p>
                 <FontAwesomeIcon icon={faGlobe} height={"16"} width={"16"} />
               </a>
             </span>
