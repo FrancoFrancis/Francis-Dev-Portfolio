@@ -54,9 +54,9 @@ const About = () => {
         <div>
           <p className={styles.about - 1}>
             Hi there! I'm Francis, a Frontend Web developer based in Abuja,
-            Nigeria.My passion lies in crafting visually stunning and highly 
+            Nigeria. My passion lies in crafting visually stunning and highly 
             responsive user interfaces that are both aesthetically pleasing and
-            highly functional.I am a naturally curious & confident person,
+            highly functional. I am a naturally curious & confident person
             and I work on improving my developer skills one pixel at
             a time. I'm an entrepreneur with the vison for building
             for the future of technology in Africa. My Goal is to build Ortentic
@@ -65,7 +65,7 @@ const About = () => {
 
           <br />
           <p className={styles.about - 2}>
-            When I am not coding or surfing the internet, you will finding me
+            When I'm not coding or surfing the internet, you will finding me
             reading books/e-books, writing song lyrics, watching tv series,
             learning a new tool, working on my personal development or playing
             basketball. I also enjoy writing articles on
