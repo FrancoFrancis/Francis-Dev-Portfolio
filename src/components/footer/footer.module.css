@@ -1,0 +1,30 @@
+.footer {
+  height: 25vh;
+  /* background-color: blue; */
+  padding: 0 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-end;
+  scroll-snap-align: start;
+}
+
+.footer p {
+  position: absolute;
+  /* left: 0; */
+  bottom: 4rem;
+  font-size: 1.55rem;
+  color: grey;
+}
+
+.footer-pattern {
+  width: 20px;
+  height: 100%;
+  background-image: url("../../../public/images/pattern1.webp");
+  background-size: cover;
+  position: absolute;
+  left: 0;
+}
+
+@media screen and (max-width: 480px) {
+}

@@ -1,0 +1,32 @@
+
+.toggle {
+    width: 50px;
+    height: 25px;
+    border-radius: 30px;
+    border: 1px solid rgb(111, 111, 111);
+    position: fixed;
+    top: 20px;
+    right: 4rem;
+    z-index: 98;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    backdrop-filter: blur(3.2px);
+
+}
+
+.toggle-icon{
+    width: 15px;
+    height: 15px;
+    color: gray;
+}
+
+.toggle-button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: url("../../../public/images/pattern1.webp");
+    background-size: cover;
+    position: absolute;
+    cursor: pointer;
+}

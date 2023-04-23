@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;700&display=swap');
+
+
+.intro{
+    display: flex;
+    height: 100vh;
+    /* background-color: #7a0808; */
+    scroll-snap-align: start;
+    position: relative;
+}
+
+
+.intro-left{
+    flex: 1;
+    color: #000000;
+
+}
+
+
+.pattern1{
+    width: 62%;
+    height: 60px;
+    /* padding: 21px 30px; */
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 130px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    position: absolute;
+    top: 75px;
+    left: 250px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.color-pattern{
+    width: 100%;
+    height: 60px;
+    background-image: linear-gradient(to right, yellow,  pink, #5d00ff);
+    margin-bottom: 20px;
+}
+
+.intro-left-wrapper{
+    padding: 100px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+
+.Logo {
+    position: absolute;
+    top: 20px;
+    font-size: 2.2rem;
+    cursor: pointer;
+    /* background-color: rgb(0, 0, 0); */
+    color:orangered;
+    /* color:orangered; */
+    /* padding: 3px 6px; */
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.Logo span {
+    color: #616161;
+}
+
+
+.introName{
+    font-size: 7.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    color:  #020202;
+    max-width: 100%;
+    font-family:"ClashGrotesk";
+    src: url("../../styles/fonts/ClashGrotesk-Variable.woff2") format("woff2");
+    /* src: url("./fonts/ClashGrotesk-Variable.woff2") format("woff2"); */
+}
+
+.intro-hi{
+    /* font-size: 32px; */
+    font-size: 6.5rem;
+    text-transform: capitalize;
+    font-weight: lighter;
+    font-weight: bold;
+    /* color: #5d00ff; */
+    color: #111111;
+}
+
+
+.intro-desc{
+    font-size: 2rem;
+    color: orangered;
+    /* text-transform: c£pitalize; */
+    max-width: 500px;
+}
+
+.fav-food{
+    font-size: 2.4rem;
+    margin-top: 5px;
+    font-weight: 300;
+    color: #000000;
+    /* color: yellow; */
+}
+
+
+.flatButton {
+    width: 220px;
+    height: 60px;
+    margin-top: 18px;
+    cursor: pointer;
+    position: relative;
+    /* background-image: linear-gradient(to bottom,  #5d00ff, rgb(255, 89, 0)); */
+    border: 1px #000000 solid;
+    border-radius: 599px;
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    /* transition: all 0.3s ease-out; */
+    text-transform: uppercase;
+    font-weight: 550;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    overflow: hidden;
+    color: whitesmoke;
+    z-index: 2;
+  }
+
+.flatButton::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    bottom: 0;
+    left: 0;
+    background-color: #ff4500;
+    /* z-index: -1; */
+    transition: all 0.5s;
+}
+
+.flatButton:hover:before{
+    height: 100%;
+    z-index: -1;
+
+}
+
+  .arrowDown{
+    position:absolute;
+    top: 79%;
+    left: 100px;
+    font-weight: lighter;
+    /* rotate: -260deg; */
+    animation: mymove 1.2s linear infinite alternate-reverse;
+  }
+
+  .star{
+    position: absolute;
+    top: 03%;
+    left: 73%;
+  }
+
+  .twolines{
+    position: absolute;
+    top: 73%;
+    left: 60%;
+  }
+
+  .triangle{
+    position: absolute;
+    right: 20%;
+    width: 30px;
+    height: 40px;
+  }
+
+  @keyframes mymove {
+    0% {
+        transform: translateY(-0.5rem);
+    }
+    100% {
+        transform: translateY(0.8rem);
+    }
+}
+
+
+
+
+  @keyframes colorChange {
+    0% {
+      background-clip: text;
+      -webkit-text-fill-color: orangered;
+      background-image: linear-gradient(to right, red, orange);
+    }
+    50% {
+      background-clip: text;
+      -webkit-text-fill-color: orangered;
+      background-image: linear-gradient(to right, orange, rgb(0, 0, 0));
+    }
+    100% {
+      background-clip: text;
+      -webkit-text-fill-color: orangered;
+      background-image: linear-gradient(to right, rgb(255, 0, 0), green);
+    }
+    
+  }
+
+  
+
+
+.flat-button1{
+    width: 62%;
+    height: 5px;
+    /* background-color: white; */
+    background-image: url("../../../public/images/pattern4.jpg");
+    background-size: cover;
+    color: #ffffff;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    border-radius: 110px;
+    position: absolute;
+    top:220px;
+    display: none;
+}
+
+.flat-button:hover{
+
+    background-color: #000000;
+    color: #ffffff;
+ 
+}
+
+.scroll{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    bottom: 30px;
+    font-size: 5.3rem;
+}
+
+.intro-title{
+    height: 50px;
+    overflow: hidden;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+
+.intro-title-item{
+    height: 50px;
+    /* font-size: 30px; */
+    font-size: 4rem;
+    /* color: #6332c3; */
+    color:rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+
+.intro-title-wrapper{
+    height: 100%;
+    animation: move 10s ease-in-out infinite alternate;
+}
+
+
+@keyframes move {
+    25% {
+        transform: translateY(-50px);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+    75% {
+        transform: translateY(-150px);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+}
+
+
+.intro-right{
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    /* background-color: #5d00ff; */
+}
+
+
+.intro-right img {
+    position: relative;
+    top: -117px;
+ 
+    height: 700px;
+    width: 700px;
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    animation-name: breathing;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /* rotate: -300deg; */
+}
+
+
+  @keyframes breathing {
+    0% {
+      /* transform: translateX(5px); */
+      transform: scale(0.981);
+    }
+    50% {
+      transform: scale(1);
+     
+    }
+    100% {
+      transform: scale(0.981);
+    
+    }
+  }
+
+
+@media screen and (max-width: 480px) {
+    .intro {
+        flex-direction: column;
+        height: 100vh;
+        
+    }
+    .intro-left{
+        flex: 1;
+    }
+
+    .arrowDown{
+       display: none;
+      }
+
+    .intro-left-wrapper{
+        margin-top: 50px;
+        padding: 30px;
+        height: 100%;
+    }
+
+    .pattern1{
+        left: 150px;
+        width: 70%;
+        height: 30px;
+    }
+
+    .intro-title-item{
+        font-size: 3.5rem;
+        
+    }
+
+
+    .flat-button1{
+        width: 70%;
+        height: 60px;
+        background-image: url("../../../public/images/pattern4.jpg");
+        background-size: cover;
+        color: #ffffff;
+        margin-top: 20px;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        border-radius: 110px;
+        position: absolute;
+        bottom: 6rem;
+        display: none;
+    }
+
+    .intro-hi{
+        font-size: 2.6rem;
+    }
+
+    .introName{
+        font-size: 6rem;
+    }
+ 
+    .intro-right{
+        flex: 1;
+    }
+    
+
+    
+   .intro-right img {
+    position: relative;
+    top: -70px;
+    left: -50px;
+    /* height: 100%; */
+    /* width: 100%; */
+    height: 480px;
+    width: 480px;
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        height: 100vh;
+        
+    }
+    .intro-left{
+        flex: 1.5;
+    }
+
+    .Logo {
+        
+        top: -30px;
+    
+    }
+
+    .intro-left-wrapper{
+        margin-top: 50px;
+        padding: 30px;
+        height: 100%;
+    }
+
+    .pattern1{
+        /* top: 80px;
+        right: 20px; */
+        top: 5px;
+        left: 140px;
+        width: 40%;
+        height: 40px;
+    }
+
+    .flat-button1{
+        width: 70%;
+        height: 60px;
+        background-image: url("../../../public/images/pattern4.jpg");
+        background-size: cover;
+        color: #ffffff;
+        margin-top: 20px;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        border-radius: 110px;
+        position: absolute;
+        bottom: 6rem;
+        display: none;
+    }
+
+    .intro-hi{
+        font-size: 2.6rem;
+    }
+
+    .intro-name{
+        font-size: 8rem;
+    }
+
+    .intro-right img {
+        position: relative;
+        top: -100px;
+        width: 500px;
+        height: 500px;
+ }    
+}

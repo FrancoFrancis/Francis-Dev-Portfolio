@@ -1,0 +1,85 @@
+.navbar {
+  position: fixed;
+  top: 88%;
+  left: 32%;
+  align-self: center;
+  background-image: url("../../../public/images/pattern1.webp");
+  background-size: cover;
+  width: 35%;
+  height: 42px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  z-index: 33;
+  border-radius: 130px;
+  border: 1px rgb(0, 0, 0) solid;
+  /* backdrop-filter: blur(3.2px);  */
+  color: rgb(255, 255, 255);
+  /* background-color: black; */
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 98%;
+  height: 85%;
+  border-radius: 888px;
+  backdrop-filter: 6px;
+  backdrop-filter: blur(1.22px);
+ 
+}
+
+.navbar nav a {
+  text-decoration: none;
+  height: 85%;
+  width: 30%;
+  margin: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  font-size: 2.1rem;
+  transition: all 0.5s;
+}
+
+.navbar nav a:hover {
+  /* background: linear-gradient(90deg, #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030); */
+  background-color: #ffff;
+  /* background-image: url("../../../public/images/pattern1.webp"); */
+  /* background-size: contain; */
+  color: rgb(0, 0, 0);
+  border: 1px #fff solid;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.navbar nav li a {
+  font-size: 2rem;
+  font-weight: 450;
+}
+
+.navbar a.active {
+  border-radius: 464px;
+  padding: 10px 25px;
+  color: white;
+  background-color: orangered;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    top: 85%;
+    width: 80%;
+    left: 11.5%;
+  }
+}
+
+@media screen and (max-width: 807px) {
+  .navbar {
+    width: 70%;
+    left: 11.5%;
+  }
+}
