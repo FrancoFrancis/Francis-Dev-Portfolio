@@ -170,10 +170,10 @@ export default function Intro() {
               style={{ color: darkMode && "white" }}
               variants={riseWithFade}
             >
-              <p>Scroll down</p>
+              <p className={styles.arrowDown}>Scroll down</p>
 
               <FaArrowDown
-                className={styles.arrowDown}
+                
                 width={30}
                 height={30}
               />
