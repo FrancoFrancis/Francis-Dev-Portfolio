@@ -19,6 +19,7 @@ import {
   RotateLoader,
   PropagateLoader,
   ClipLoader,
+  BounceLoader
 } from "react-spinners";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -57,7 +58,7 @@ export default function Home() {
             <br />
             <span>
               
-              <ClipLoader
+              <BounceLoader
                 color={"orangered"}
                 backgroundColor={"black"}
                 loading={loading}
