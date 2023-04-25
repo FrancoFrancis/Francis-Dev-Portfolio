@@ -163,7 +163,7 @@
 .email h2 {
   font-size: 3rem;
   margin-bottom: 10px;
-  color: rgb(88, 87, 87);
+  color: #585757;
 }
 .email h1 {
   font-weight: 600;
@@ -223,7 +223,6 @@
   text-indent: 8px;
   border: none;
   background-color: rgb(240, 240, 240);
-  /* color: black; */
   padding-top: 20px;
   width: 100%;
   font-size: 1.8rem;

@@ -28,17 +28,24 @@ const Navbar = () => {
           offset={50}
           duration={400}
           transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
+          // style={{  backgroundColor: darkMode && "#585757" }}
         >
           {" "}
           About
+
         </Link>
 
-        <Link to="projects" spy={true} smooth={true} offset={50} duration={400}>
+        <Link to="projects" spy={true} smooth={true} offset={50} duration={400}
+        // style={{  backgroundColor: darkMode && "#585757" }}
+        >
           {" "}
           Projects{" "}
+          
         </Link>
 
-        <Link to="contact" spy={true} smooth={true} offset={50} duration={400}>
+        <Link to="contact" spy={true} smooth={true} offset={50} duration={400}
+        // style={{  backgroundColor: darkMode && "#585757" }}
+        >
           {" "}
           Contact{" "}
         </Link>
