@@ -46,7 +46,7 @@ const About = () => {
             headingIsVisible ? styles.animateHeading : ""
           }`}
         >
-          About Me
+          Who is Francis?
         </h1>
 
         {/* <h1 ref={headingRef} >ABOUT ME {myElementIsVisible ? 'yes' : 'no'} </h1> */}
@@ -58,8 +58,8 @@ const About = () => {
             responsive user interfaces that are both aesthetically pleasing and
             highly functional. I am a naturally curious & confident person
             and I work on improving my developer skills one pixel at
-            a time. I'm an entrepreneur with the vison for building
-            for the future of technology in Africa. My Goal is to build Ortentic
+            a time. I'm an entrepreneur with the vision for building
+            the future of technology in Africa. My Goal is to build Ortentic
             Nigeria(Startup) and get Product Market Fit.
           </p>
 
