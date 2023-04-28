@@ -51,25 +51,22 @@
   gap: 30px;
   margin-top: 20px;
 }
+
 .socials h2 {
   font-size: 3.2rem;
 }
+
 .socials div a {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* gap: 20px; */
-  height: 25px;
-  width: 60px;
-  /* margin: 0 20px; */
+  height: 40px;
+  width: 40px;
   background-color: black;
-  /* background: linear-gradient(90deg, #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030); */
-  /* background-image: url("../../images/pattern1.webp"); */
-  /* background-size: cover; */
   color: white;
   padding: 5px;
   font-size: 2rem;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 .socials div a:hover {
@@ -85,7 +82,7 @@
   height: 60px;
   border: 1px solid #000000;
   color: #fff;
-  border-radius: 55px;
+  border-radius: 20px;
   text-decoration: none;
   font-size: 16px;
   /* padding: 10px 30px; */
@@ -127,16 +124,17 @@
 
 .popup {
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 30%;
   transform: translate(-50%, -50%);
-  background-color: #f2f2f2;
-  color: black;
-  padding: 50px;
+  background-color:#252525;
+  color: rgb(255, 255, 255);
+  padding: 10px 50px;
+  border-radius: 20px;
   animation: popup 3s ease-in-out;
   z-index: 94743;
   font-size: 1.2rem;
-  height: 50px;
+  height: 40px;
   width: 100px;
   display: flex;
   justify-content: center;
@@ -180,12 +178,19 @@
   color: #100f0f;
   text-rendering: optimizeLegibility;
 }
+
 .phone {
   margin-top: 20px;
+  /* background-color: black; */
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
 }
 
-.phone .icon {
-  margin-right: 8px;
+
+.phone .animateSection {
+  margin-right: 15px;
+
 }
 
 .contact-right {
@@ -207,8 +212,10 @@
 }
 
 .contact-form input {
-  border-radius: 50px;
+  border-radius: 10px;
   border: none;
+  outline: none;
+  background: none;
   font-size: 1.8rem;
   height: 50px;
   width: 100%;
@@ -222,6 +229,7 @@
   margin-bottom: 10px;
   text-indent: 8px;
   border: none;
+  outline: none;
   background-color: rgb(240, 240, 240);
   padding-top: 20px;
   width: 100%;
@@ -231,11 +239,11 @@
 
 .contact-form button {
   position: relative;
-  border-radius: 50px;
+  border-radius: 20px;
   border: 1px black solid;
   font-weight: 500;
   margin-top: 10px;
-  height: 55px;
+  height: 60px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -256,6 +264,8 @@
   bottom: 0;
   left: 0;
   background-color: var(--main-color);
+  /* background: linear-gradient(90deg, #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030); */
+
   transition: all 0.5s;
   overflow: hidden;
 }

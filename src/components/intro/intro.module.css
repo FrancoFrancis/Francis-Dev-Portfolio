@@ -7,7 +7,7 @@
   /* background-color: #7a0808; */
   scroll-snap-align: start;
   position: relative;
-  /* background: linear-gradient(90deg, #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030); */
+  background: linear-gradient(90deg,toBottom #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030);
 }
 
 .intro-left {
@@ -16,12 +16,6 @@
   z-index: 2;
 }
 
-.color-pattern {
-  width: 100%;
-  height: 60px;
-  background-image: linear-gradient(to right, yellow, pink, #5d00ff);
-  margin-bottom: 20px;
-}
 
 .intro-left-wrapper {
   padding: 100px;
@@ -42,12 +36,11 @@
   z-index: 3;
 }
 
-/* .rocketLogo{
-  
-} */
 
-.Logo span {
-  color: #616161;
+.Logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--main-color);
   z-index: 2;
 }
 
@@ -92,15 +85,17 @@
 
 .helloThere {
   z-index: -1;
-  font-size: 10rem;
+  font-size: 15rem;
   font-weight: bolder;
-  color: #a8a8a81a;
+  color: #bfbfbf16;
+  /* background-color: #9696960e; */
   position: absolute;
-  top: 50px;
-  /* color: #a8a8a80e; */
-  /* bottom: 130px; */
-  /* left: -10px; */
+  left: -15px;
+  top: 45px;
+  /* display: none; */
 }
+
+
 
 .flatButton {
   width: 220px;
@@ -108,23 +103,20 @@
   margin-top: 18px;
   cursor: pointer;
   position: relative;
-  /* background-image: linear-gradient(to bottom,  #5d00ff, rgb(255, 89, 0)); */
-  border: 2px #000000 solid;
-  border-radius: 599px;
+  background-color: #000000;
+  border: 1px #000000 solid;
+  border-radius: 20px;
   font-size: 1.9rem;
   letter-spacing: 1px;
   text-align: center;
   text-decoration: none;
-  /* transition: all 0.3s ease-out; */
-  /* text-transform: ; */
   font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
   overflow: hidden;
   color: whitesmoke;
-  z-index: 2;
+  z-index: 4;
 }
 
 .flatButton::before {
@@ -135,13 +127,20 @@
   bottom: 0;
   left: 0;
   background-color: var(--main-color);
-  /* z-index: -1; */
+  /* background: linear-gradient(90deg, #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030); */
+  color: rgb(8, 8, 8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.5s;
+  z-index: -1;
 }
 
 .flatButton:hover:before {
-  height: 100%;
+  height: 105%;
   z-index: -1;
+  color: #000000;
+  z-index: -3;
 }
 
 .arrowDown {
@@ -279,7 +278,6 @@
 .intro-right img {
   position: relative;
   top: -117px;
-
   height: 700px;
   width: 700px;
   position: absolute;
@@ -315,6 +313,16 @@
   }
   .scrollDown {
     top: 65vh;
+  }
+
+  .helloThere {
+    z-index: -1;
+    font-size: 6rem;
+    font-weight: bolder;
+    color: #a8a8a816;
+    position: absolute;
+    left: -10px;
+    top: 45px;
   }
 
 
@@ -434,5 +442,29 @@
     top: -100px;
     width: 500px;
     height: 500px;
+  }
+}
+
+/* Section Fade in Animation */
+
+.animateSection {
+  animation: ease-in-out;
+  animation-direction: normal;
+  animation-duration: 0.7s;
+  animation-name: animate-section;
+}
+
+@keyframes animate-section {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
   }
 }

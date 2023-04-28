@@ -54,7 +54,7 @@ export default function Home() {
       >
         {loading ? (
           <span className={styles.loader}>
-            <h1>Winnerman Francis </h1>
+            <h1>Winnerman Francis. </h1>
             <br />
             <span>
               

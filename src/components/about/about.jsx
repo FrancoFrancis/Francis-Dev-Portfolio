@@ -19,13 +19,17 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faRobot } from "@fortawesome/free-solid-svg-icons";
 import { motion as m } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useContext } from "react";
 import { useInView } from "react-intersection-observer";
+import { ThemeContext } from "../../../context";
 
 const About = () => {
   const { ref: myRef, inView: myElementIsVisible } = useInView();
   const { ref: headingRef, inView: headingIsVisible } = useInView();
   const { ref: sectionRef, inView: sectionIsVisible } = useInView();
+
+  const theme = useContext(ThemeContext);
+  const darkMode = theme?.state?.darkMode;
 
   return (
     <m.div
@@ -53,7 +57,7 @@ const About = () => {
 
         <div>
           <p className={styles.about - 1}>
-            Hi there! I'm Francis, a Frontend Web developer based in Abuja,
+            Hi there! I'm Francis, a Front-end Web Developer based in Abuja,
             Nigeria. My passion lies in crafting visually stunning and highly 
             responsive user interfaces that are both aesthetically pleasing and
             highly functional. I am a naturally curious & confident person
@@ -104,42 +108,50 @@ const About = () => {
             &lt;Skillset/&gt;{" "}
           </h1>
           <p>
-            <FontAwesomeIcon icon={faReact} height={"20"} width={"20"} /> React
-            + Next.js{" "}
+            <FontAwesomeIcon icon={faReact} height={"20"} width={"20"} /> 
+            
+            <span
+            style={{ backgroundColor: darkMode && "#3d3d3d" }}
+
+            > React
+            + Next.js</span>
+           
           </p>
           <p>
             <FontAwesomeIcon icon={faJs} height={"20"} width={"20"} />{" "}
-            JavaScript
+            <span style={{ backgroundColor: darkMode && "#3d3d3d" }}>JavaScript</span>
           </p>
           <p>
-            <FontAwesomeIcon icon={faSass} height={"20"} width={"20"} /> SASS +
-            CSS
+            <FontAwesomeIcon icon={faSass} height={"20"} width={"20"} /> 
+            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}> SASS +  CSS </span>
           </p>
           <p>
             <FontAwesomeIcon icon={faHtml5} height={"20"} width={"20"} />
-            HTML5
+            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}>HTML5</span>
           </p>
           <p>
             <FontAwesomeIcon icon={faRobot} height={"20"} width={"20"} />{" "}
-            ChatGPT{" "}
+            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}>ChatGPT</span>
           </p>
           <p>
             <FontAwesomeIcon icon={faNodeJs} height={"20"} width={"20"} />{" "}
-            NodeJs{" "}
+            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}>NodeJs</span>
           </p>
           <p>
-            <FontAwesomeIcon icon={faGit} height={"20"} width={"20"} /> Git{" "}
+            <FontAwesomeIcon icon={faGit} height={"20"} width={"20"} /> 
+            <span style={{ backgroundColor: darkMode &&  "#3d3d3d"}}>Git</span>
           </p>
           <p>
             <FontAwesomeIcon icon={faBootstrap} height={"20"} width={"20"} />{" "}
-            BootStrap{" "}
+            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}>BootStrap</span>
           </p>
           <p>
-            <FontAwesomeIcon icon={faFigma} height={"20"} width={"20"} /> Figma{" "}
+            <FontAwesomeIcon icon={faFigma} height={"20"} width={"20"} />
+            <span color="red" style={{ backgroundColor: darkMode &&  "#3d3d3d" }}> Figma</span>
           </p>
           <p>
             <FontAwesomeIcon icon={faDocker} height={"20"} width={"20"} />{" "}
-            Docker{" "}
+           <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}> Docker</span>
           </p>
         </div>
       </div>

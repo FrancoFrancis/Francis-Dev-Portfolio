@@ -2,7 +2,7 @@
 .toggle {
     width: 50px;
     height: 25px;
-    border-radius: 30px;
+    border-radius: 9px;
     border: 1px solid rgb(111, 111, 111);
     position: fixed;
     top: 20px;
@@ -10,8 +10,8 @@
     z-index: 98;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    backdrop-filter: blur(3.2px);
+    justify-content: space-between;
+    padding: 0 2px;
 
 }
 
@@ -19,14 +19,16 @@
     width: 15px;
     height: 15px;
     color: gray;
+    /* margin: 2px; */
 }
 
 .toggle-button {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+    width: 23.5px;
+    height: 23.5px;
+    border-radius: 7px;
     background-image: url("../../../public/images/pattern1.webp");
     background-size: cover;
     position: absolute;
     cursor: pointer;
+    margin: 0 3px;
 }

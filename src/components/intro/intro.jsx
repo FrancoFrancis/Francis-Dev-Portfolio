@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./intro.module.css";
-import { easeOut, motion as m } from "framer-motion";
+import { easeOut, motion as m, useInView } from "framer-motion";
 
 import React, { useContext } from "react";
 // import HandDrawn from "../../../public/images/u-code.svg";
@@ -16,7 +16,7 @@ import React, { useContext } from "react";
 // import TwoLines1 from "../../../public/images/u-two-lines1.svg";
 
 import Me from "../../../public/images/space.png";
-import Pattern1 from "../../../public/images/pattern1.webp";
+import zaza from "../../../public/images/zaza.gif";
 import { Link } from "react-scroll";
 import { ThemeContext } from "../../../context";
 import Image from "next/image";
@@ -31,12 +31,18 @@ export default function Intro() {
   const theme = useContext(ThemeContext);
   const darkMode = theme?.state?.darkMode;
 
+  // const { ref: sectionRef, inView: sectionIsVisible } = useInView();
+
   return (
     <m.div
       initial="initial"
       animate="animate"
       variants={staggerChildren}
       className={styles["intro"]}
+      // className={`${styles.intro}  ${
+      //   sectionIsVisible ? styles.animateSection : ""
+      // }`}
+      // ref={sectionRef}
     >
       <div className={styles["intro-left"]}>
         <div className={styles["intro-left-wrapper"]}>
@@ -46,32 +52,25 @@ export default function Intro() {
             smooth={true}
             offset={50}
             duration={400}
-            className={styles["Logo"]}
+            className={styles.Logo}
             style={{ color: darkMode && "gray" }}
             variants={riseWithFade}
+            href="#"
           >
-            {" "}
-            <span>
-              WF.
-              {/* <Image className={styles.rocketLogo} src={Rocket} alt="3D icon" />  */}
-            </span>
+             WF.
           </Link>
 
           <m.h1
             className={styles.helloThere}
-            style={{ color: darkMode && "#a8a8a80e" }}
+            style={{ color: darkMode && "#9696960e" }}
+            // style={{ color: darkMode && "#a8a8a80e" }}
             variants={riseWithFade}
           >
-            {" "}
-            Hello There,
+            <h1> Hello</h1>
+            <h1> There,</h1>
           </m.h1>
           <m.div className={styles.container}>
-            <h1
-              className={styles["intro-hi"]}
-              style={{ color: darkMode && "white" }}
-            >
-              {/* hi there, i'm */}
-            </h1>
+          
 
             <m.h1
               variants={riseWithFade}
@@ -156,8 +155,8 @@ export default function Intro() {
                 duration={400}
                 className={styles.flatButton}
                 style={{
-                  background: darkMode && "transparent",
-                  color: darkMode ? "#fff" : "#000",
+                  background: darkMode && "#fff",
+                  color: darkMode ? "#000" : "",
                   borderColor: darkMode ? "#fff" : "",
                 }}
               >
@@ -185,6 +184,7 @@ export default function Intro() {
 
       <m.div className={styles["intro-right"]} variants={riseWithFade}>
         <Image src={Me} alt="3D icon" />
+        {/* <Image src={Me} alt="3D icon" /> */}
       </m.div>
     </m.div>
   );

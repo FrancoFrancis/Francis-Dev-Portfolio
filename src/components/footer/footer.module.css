@@ -1,5 +1,5 @@
 .footer {
-  height: 25vh;
+  height: 18vh;
   /* background-color: blue; */
   padding: 0 100px;
   position: relative;
@@ -8,6 +8,8 @@
   justify-items: flex-end;
   scroll-snap-align: start;
 }
+
+
 
 .footer p {
   position: absolute;

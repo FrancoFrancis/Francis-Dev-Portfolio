@@ -180,17 +180,17 @@ const Contact = () => {
             <h2 className={styles.phone}>
               <FontAwesomeIcon
                 className="icon"
-                color="gray"
+                color="#252525"
                 icon={faPhone}
                 height={"20"}
                 width={"20"}
               />
               +(234)8105148453
             </h2>
-            <h2 className={styles["phone"]}>
+            <h2 className={styles.phone}>
               <FontAwesomeIcon
                 className="icon"
-                color="gray"
+                color=" #252525"
                 icon={faLocationDot}
                 height={"20"}
                 width={"20"}

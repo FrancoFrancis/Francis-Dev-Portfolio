@@ -2,19 +2,20 @@
   /* background-color: #1c034f ; */
   background-image: url("../../../public/images/pattern1.webp");
   background-size: cover;
-  height: 2.3rem;
-  width: 4.5rem;
+  height: 37px;
+  width: 37px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 4rem;
+  bottom: 3.1rem;
   right: 4rem;
   color: white;
-  border-radius: 110px;
+  border-radius: 10px;
   z-index: 888;
   cursor: pointer;
-  padding: 9px;
+  padding: 3px;
+  border: 1px solid rgb(111, 111, 111);
   /* border: 2px black solid; */
 }
 

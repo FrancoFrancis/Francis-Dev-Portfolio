@@ -41,10 +41,12 @@ const Projects = () => {
           className={styles["card"]}
           style={{ backgroundColor: darkMode && "orangered" }}
         >
-          <div className={styles["p-browser"]}>
-            <div className={styles["p-circle"]}></div>
-            <div className={styles["p-circle"]}></div>
-            <div className={styles["p-circle"]}></div>
+          <div className={styles.pBrowser}
+          style={{ backgroundColor: darkMode && "#00000018" }}
+          >
+            <div className={styles.pcircle} ></div>
+            <div className={styles.pcircle}></div>
+            <div className={styles.pcircle}></div>
           </div>
 
           <div className={styles["content"]}>
@@ -64,6 +66,7 @@ const Projects = () => {
                   icon={faCodeBranch}
                   height={"16"}
                   width={"16"}
+                  // color="orangered"
                 />
               </a>
             </span>
@@ -89,7 +92,10 @@ const Projects = () => {
           className={styles["card"]}
           style={{ backgroundColor: darkMode && "#08a308" }}
         >
-          <div className={styles["p-browser"]}>
+          <div className={styles.pBrowser} 
+          style={{ backgroundColor: darkMode && "#00000018" }}
+          
+          >
             <div className="p-circle"></div>
             <div className="p-circle"></div>
             <div className="p-circle"></div>
@@ -136,7 +142,10 @@ const Projects = () => {
           className={styles["card"]}
           style={{ backgroundColor: darkMode && "#2222ed" }}
         >
-          <div className={styles["p-browser"]}>
+          <div className={styles.pBrowser} 
+          style={{ backgroundColor: darkMode && "#00000018" }}
+          
+          >
             <div className="p-circle"></div>
             <div className="p-circle"></div>
             <div className="p-circle"></div>
@@ -182,10 +191,12 @@ const Projects = () => {
           className={styles["card"]}
           style={{ backgroundColor: darkMode && "#5e17eb" }}
         >
-          <div className={styles["p-browser"]}>
-            <div className="p-circle"></div>
-            <div className="p-circle"></div>
-            <div className="p-circle"></div>
+          <div className={styles.pBrowser} 
+          style={{ backgroundColor: darkMode && "#00000018" }}
+          >
+            <div className={styles.pcircle} ></div>
+            <div className={styles.pcircle}></div>
+            <div className={styles.pcircle}></div>
           </div>
 
           <div className={styles["content"]}>
@@ -225,9 +236,11 @@ const Projects = () => {
         {/* five*/}
         <div
           className={styles["card"]}
-          style={{ backgroundColor: darkMode && "#e01111" }}
+          style={{ backgroundColor: darkMode && "RED" }}
         >
-          <div className={styles["p-browser"]}>
+          <div className={styles.pBrowser}
+          style={{ backgroundColor: darkMode && "#00000018" }}
+          >
             <div className="p-circle"></div>
             <div className="p-circle"></div>
             <div className="p-circle"></div>
@@ -272,14 +285,17 @@ const Projects = () => {
           className={styles["card"]}
           style={{ backgroundColor: darkMode && "#333" }}
         >
-          <div className={styles["p-browser"]}>
+          <div className={styles.pBrowser}
+          style={{ backgroundColor: darkMode && "#00000018" }}
+          >
+
             <div className="p-circle"></div>
             <div className="p-circle"></div>
             <div className="p-circle"></div>
           </div>
 
           <div className={styles["content"]}>
-            <h1>My Github</h1>
+            <h1>Go-to my Github</h1>
 
             <span>
               <a
