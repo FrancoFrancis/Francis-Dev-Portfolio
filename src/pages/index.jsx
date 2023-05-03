@@ -1,3 +1,5 @@
+"use client"
+
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
@@ -57,12 +59,11 @@ export default function Home() {
             <h1>Winnerman Francis. </h1>
             <br />
             <span>
-              
-              <BounceLoader
+              <RotateLoader
                 color={"orangered"}
                 backgroundColor={"black"}
                 loading={loading}
-                size={50}
+                size={40}
                 aria-label="Loading Spinner"
                 data-testid="loader"
                 speedMultiplier={1}

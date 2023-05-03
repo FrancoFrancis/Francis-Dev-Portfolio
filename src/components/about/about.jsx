@@ -5,6 +5,7 @@ import styles from "./about.module.css";
 import Pattern2 from "../../../public/images/pattern1.webp";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faBootstrap,
   faCss3,
@@ -50,10 +51,9 @@ const About = () => {
             headingIsVisible ? styles.animateHeading : ""
           }`}
         >
-          Who is Francis?
+          About me
         </h1>
 
-        {/* <h1 ref={headingRef} >ABOUT ME {myElementIsVisible ? 'yes' : 'no'} </h1> */}
 
         <div>
           <p className={styles.about - 1}>
@@ -62,9 +62,8 @@ const About = () => {
             responsive user interfaces that are both aesthetically pleasing and
             highly functional. I am a naturally curious & confident person
             and I work on improving my developer skills one pixel at
-            a time. I'm an entrepreneur with the vision for building
-            the future of technology in Africa. My Goal is to build Ortentic
-            Nigeria(Startup) and get Product Market Fit.
+            a time. I'm an entrepreneur with passion and vision for building
+            innovative tech solutions in Nigeria, Africa  and the world at large.
           </p>
 
           <br />

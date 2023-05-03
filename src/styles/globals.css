@@ -1,8 +1,8 @@
+
+
 :root{
   --main-color:orangered;
   /* background: linear-gradient(90deg, #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030); */
-
-  
 }
 
 body {
@@ -14,7 +14,6 @@ body {
   /* background: linear-gradient(90deg, #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030); */
 }
 
-
 html{
   font-size: 50.5%;
   scroll-behavior: smooth;
@@ -25,11 +24,10 @@ html{
   overflow-x: hidden;
   font-family:"ClashGrotesk";
   src: url("./fonts/ClashGrotesk-Variable.woff2") format("woff2"); 
-  
+  /* overflow: hidden; */
 }
 
 code {
- 
  scroll-behavior: smooth;
 }
 
@@ -49,9 +47,8 @@ code {
   padding: 0;
   font-family:"ClashGrotesk";
   src: url("./fonts/ClashGrotesk-Variable.woff2") format("woff2"); 
+  /* overflow: hidden; */
 }
-
-
 
 ::-webkit-scrollbar{
   width: 7px;

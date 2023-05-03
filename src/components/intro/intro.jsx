@@ -53,7 +53,7 @@ export default function Intro() {
             offset={50}
             duration={400}
             className={styles.Logo}
-            style={{ color: darkMode && "gray" }}
+            style={{ color: darkMode && "orangered" }}
             variants={riseWithFade}
             href="#"
           >
@@ -89,7 +89,7 @@ export default function Intro() {
               >
                 <div
                   className={styles["intro-title-item"]}
-                  style={{ color: darkMode && "#fff" }}
+                  style={{ color: darkMode && "orangered" }}
                 >
                   Frontend Web Developer
                 </div>
@@ -99,12 +99,7 @@ export default function Intro() {
                 >
                   Entrepreneur
                 </div>
-                <div
-                  className={styles["intro-title-item"]}
-                  style={{ color: darkMode && "#fff" }}
-                >
-                  Designer
-                </div>
+              
                 <div
                   className={styles["intro-title-item"]}
                   style={{ color: darkMode && "#fff" }}
@@ -121,7 +116,9 @@ export default function Intro() {
                 <div
                   className={styles["intro-title-item"]}
                   style={{ color: darkMode && "#fff" }}
-                ></div>
+                >
+                  Content Creator
+                </div>
               </div>
             </m.div>
             <br />
@@ -143,7 +140,7 @@ export default function Intro() {
               className={styles["fav-food"]}
               style={{ color: darkMode && "white" }}
             >
-              Wanna make me happy? give me rice and chicken stew 🍛
+              wanna make me happy? give me rice and chicken stew 🍛
             </m.h3>
 
             <m.span variants={riseWithFade}>
@@ -175,6 +172,7 @@ export default function Intro() {
                 
                 width={30}
                 height={30}
+                color="orangered"
               />
             </m.span>
 
@@ -183,8 +181,8 @@ export default function Intro() {
       </div>
 
       <m.div className={styles["intro-right"]} variants={riseWithFade}>
-        <Image src={Me} alt="3D icon" />
-        {/* <Image src={Me} alt="3D icon" /> */}
+        <Image src={Me} alt="3D icon" className={styles.me} />
+        
       </m.div>
     </m.div>
   );

@@ -6,7 +6,7 @@
   background-size: cover;
   width: 35%;
   height: 42px;
-  padding: 5px;
+  padding: 5px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,6 +15,7 @@
   border-radius: 20px;
   border: 1px solid rgb(111, 111, 111);
   color: rgb(255, 255, 255);
+  backdrop-filter: blur(1.62px);
 }
 
 .navbar nav {
@@ -25,10 +26,10 @@
   width: 98%;
   height: 85%;
   border-radius: 15px;
-  backdrop-filter: 6px;
-  /* backdrop-filter: blur(1.22px); */
+  backdrop-filter: blur(1.62px);
   /* background-color: black; */
   background-image: url("../../../public/images/pattern1.webp");
+  margin: 0 5px;
   background-size: cover;
  
 }
@@ -49,8 +50,6 @@
 .navbar nav a:hover {
   /* background: linear-gradient(90deg, #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030); */
   background-color: #ffff;
-  /* background-image: url("../../../public/images/pattern1.webp"); */
-  /* background-size: contain; */
   color: rgb(0, 0, 0);
   border: 1px #fff solid;
   transition: all 0.5s;
@@ -63,7 +62,7 @@
   font-weight: 450;
 }
 
-.navbar a.active {
+ .active {
   border-radius: 20px;
   padding: 10px 25px;
   color: white;
@@ -74,13 +73,23 @@
   .navbar {
     top: 85%;
     width: 80%;
-    left: 11.5%;
+    /* left: 50vw; */
+  }
+
+  .navbar nav {
+    width: 96.5%;
+   
   }
 }
 
 @media screen and (max-width: 807px) {
   .navbar {
     width: 70%;
-    left: 11.5%;
+    left: 15%;
+  }
+
+  .navbar nav {
+    width: 97.5%;
+  
   }
 }

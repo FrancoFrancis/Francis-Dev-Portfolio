@@ -29,14 +29,14 @@ const Toggle = () => {
     >
       <FontAwesomeIcon
         icon={faSun}
-        className="toggle-icon"
+        className={styles.Icons}
         alt="toggle icon"
         height={"16"}
         width={"16"}
       />
       <FontAwesomeIcon
         icon={faMoon}
-        className="toggle-icon"
+        className={styles.Icons}
         alt="toggle icon"
         height={"16"}
         width={"16"}

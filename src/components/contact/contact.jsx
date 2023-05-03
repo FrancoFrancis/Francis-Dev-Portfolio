@@ -28,11 +28,37 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [showMessage, setShowMessage] = useState(false);
+  // const [showMessage, setShowMessage] = useState(false);
 
   const { ref: headingRef, inView: headingIsVisible } = useInView();
 
   const form = useRef();
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   setName(""); // Clears the name input field
+  //   setSubject(""); // Clears the subject input field
+  //   setEmail(""); // Clears the email input field
+  //   setMessage(""); // Clears the email message field
+  //   setShowMessage(true);
+  //   setTimeout(() => setShowMessage(false), 3000);
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_l2a5yce",
+  //       "template_fvcwldi",
+  //       form.current,
+  //       "vR1oXy0at0XPbe-Xk"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -40,8 +66,6 @@ const Contact = () => {
     setSubject(""); // Clears the subject input field
     setEmail(""); // Clears the email input field
     setMessage(""); // Clears the email message field
-    setShowMessage(true);
-    setTimeout(() => setShowMessage(false), 3000);
 
     emailjs
       .sendForm(
@@ -53,6 +77,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          window.alert("Form submitted successfully!");
         },
         (error) => {
           console.log(error.text);
@@ -203,7 +228,7 @@ const Contact = () => {
         {/* RIGHT */}
         <div className={styles["contact-right"]}>
           <p className={styles["desc"]}>
-            I am interested in freelance oppurtunities - However if you have
+            I am interested in freelance opportunities - However if you have
             other requests or questions, there you go, contact me using the form
             below 😎
           </p>
@@ -248,17 +273,20 @@ const Contact = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
-              // className={styles["form-textarea"]}
+
+            className={styles.textarea}
+              cols="30"
+              rows="5"
+              name="message"
+              placeholder="Message"
               style={{
                 backgroundColor: darkMode && "#333",
                 color: darkMode && "#fff",
               }}
-              name="message"
-              placeholder="Message"
-              rows="5"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
+            
             <button
               style={{
                 borderColor: darkMode && "#fff",
@@ -276,13 +304,13 @@ const Contact = () => {
               />
             </button>
           </form>
-          {showMessage && (
+          {/* {showMessage && (
             <div className={styles.popup}>
               <p>
                 Thanks for reaching out <br /> I'll get back to you ASAP 👍🏽!
               </p>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </m.div>

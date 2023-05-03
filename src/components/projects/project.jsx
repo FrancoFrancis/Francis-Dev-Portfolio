@@ -50,7 +50,7 @@ const Projects = () => {
           </div>
 
           <div className={styles["content"]}>
-            <h1>Ortentic Nigeria (Startup)</h1>
+            <h1>Ortentic Nigeria </h1>
             <p>REACT + SASS + STRAPI + STRIPE</p>
             <p>E - commerce App for clothing and foreign used items </p>
 

@@ -1,13 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;700&display=swap"); */
 
 .intro {
   display: flex;
   height: 100vh;
-  /* background-color: #7a0808; */
   scroll-snap-align: start;
   position: relative;
-  background: linear-gradient(90deg,toBottom #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030);
+  /* background: linear-gradient(90deg,toBottom #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030); */
 }
 
 .intro-left {
@@ -49,20 +48,16 @@
   text-transform: capitalize;
   letter-spacing: 1px;
   font-weight: bolder;
-  /* color:  var(--main-color); */
   max-width: 100%;
   font-family: "ClashGrotesk";
   src: url("../../styles/fonts/ClashGrotesk-Variable.woff2") format("woff2");
-  /* src: url("./fonts/ClashGrotesk-Variable.woff2") format("woff2"); */
 }
 
 .intro-hi {
-  /* font-size: 32px; */
   font-size: 3rem;
   text-transform: capitalize;
   font-weight: lighter;
   font-weight: bold;
-  /* color: #5d00ff; */
   color: #111111;
 }
 
@@ -70,8 +65,6 @@
   font-size: 2.5rem;
   font-weight: lighter;
   border-radius: 20px;
-  /* text-transform: lowercase; */
-  /* color: var(--main-color); */
   color: #616161;
 }
 
@@ -80,19 +73,16 @@
   margin-top: 5px;
   font-weight: 360;
   color: #000000;
-  /* color: yellow; */
 }
 
 .helloThere {
   z-index: -1;
   font-size: 15rem;
   font-weight: bolder;
-  color: #bfbfbf16;
-  /* background-color: #9696960e; */
+  color: #bfbfbf1f;
   position: absolute;
   left: -15px;
   top: 45px;
-  /* display: none; */
 }
 
 
@@ -137,7 +127,7 @@
 }
 
 .flatButton:hover:before {
-  height: 105%;
+  height: 100%;
   z-index: -1;
   color: #000000;
   z-index: -3;
@@ -148,15 +138,17 @@
   font-weight: lighter;
   /* rotate: -260deg; */
   animation: mymove 1.2s linear infinite alternate-reverse;
+ 
 }
 
 .scrollDown {
   position: absolute;
-  top: 70%;
+  top: 83vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  
 }
 
 .scrollDown p {
@@ -244,7 +236,7 @@
 .intro-title-item {
   height: 50px;
   font-size: 4rem;
-  color: rgb(0, 0, 0);
+  color: var(--main-color);
   display: flex;
   align-items: center;
 }
@@ -273,9 +265,11 @@
   flex: 1;
   position: relative;
   overflow: hidden;
+  padding-right: 30px;
 }
 
-.intro-right img {
+.intro-right .me {
+
   position: relative;
   top: -117px;
   height: 700px;
@@ -367,28 +361,52 @@
   }
 
   .intro-right {
+    flex: 1.3;
+    position: relative;
+  }
+
+  .intro-right .me {
+    height: 450px;
+    width: 450px;
+    position: absolute;
+    top: -50px;
+    left: -25px;
+    object-fit: cover;
+    overflow: hidden;
+    /* display: none; */
+  }
+
+}
+
+
+@media screen and (max-width: 1118px){
+
+  .intro{
+    flex-direction: column;
     flex: 1;
   }
 
   .intro-right img {
-    position: relative;
-    top: -70px;
-    left: -50px;
-    /* height: 100%; */
-    /* width: 100%; */
-    height: 480px;
-    width: 480px;
-    position: absolute;
-    object-fit: cover;
-    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    height: 490px;
+    width: 490px;
   }
+
+  .intro-right{
+    flex: 1;
+  }
+
 }
 
+
 @media screen and (max-width: 768px) {
+
   .intro {
     flex-direction: column;
     height: 100vh;
   }
+
   .intro-left {
     flex: 1.5;
   }
@@ -404,8 +422,6 @@
   }
 
   .pattern1 {
-    /* top: 80px;
-        right: 20px; */
     top: 5px;
     left: 140px;
     width: 40%;

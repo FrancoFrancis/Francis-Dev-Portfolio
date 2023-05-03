@@ -47,7 +47,6 @@
 }
 .socials div {
   display: flex;
-  /* justify-content:space-between; */
   gap: 30px;
   margin-top: 20px;
 }
@@ -76,6 +75,7 @@
 /* NEW RESUME BUTTON */
 
 .resume-Button {
+  background-color: #000;
   /* border: linear-gradient(to right, red, orange, yellow, green, blue, indigo, blueviolet) ; */
   border-image-slice: 1;
   width: 220px;
@@ -85,8 +85,6 @@
   border-radius: 20px;
   text-decoration: none;
   font-size: 16px;
-  /* padding: 10px 30px; */
-  /* margin-top: 1rem; */
   margin-bottom: 20px;
   animation-name: colorChange;
   animation-iteration-count: infinite;
@@ -97,8 +95,6 @@
 
 .resume-Button a:hover {
   font-size: 20px;
-  /* color: black;
-    animation-iteration-count: 1; */
 }
 
 @keyframes colorChange {
@@ -225,16 +221,16 @@
   background-color: rgb(240, 240, 240);
 }
 
-.contact-form textarea {
+.contact-form .textarea{
   margin-bottom: 10px;
   text-indent: 8px;
   border: none;
   outline: none;
   background-color: rgb(240, 240, 240);
   padding-top: 20px;
-  width: 100%;
   font-size: 1.8rem;
   border-radius: 10px;
+
 }
 
 .contact-form button {
@@ -250,8 +246,8 @@
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  background-color: transparent;
-  color: rgb(3, 2, 2);
+  background-color: #000;
+  color: rgb(255, 255, 255);
   z-index: 2;
   overflow: hidden;
 }
@@ -265,10 +261,10 @@
   left: 0;
   background-color: var(--main-color);
   /* background: linear-gradient(90deg, #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030); */
-
   transition: all 0.5s;
   overflow: hidden;
 }
+
 .contact-form button:hover:before {
   height: 100%;
   z-index: -1;
@@ -282,6 +278,7 @@
 /* .contact-form span:hover{
     transform: translateX(20px);
 } */
+
 
 @media screen and (max-width: 480px) {
   .contact-wrapper {
@@ -392,12 +389,15 @@
   }
 }
 
+
 /* styles for devices with a height of 667px */
+
 @media screen and (max-height: 667px) {
   .app-container {
     min-height: 100vh;
   }
 }
+
 
 .animateHeading {
   animation: ease-in;
@@ -405,6 +405,7 @@
   animation-duration: 0.71s;
   animation-name: animate-heading;
 }
+
 
 @keyframes animate-heading {
   0% {
@@ -434,12 +435,14 @@
   }
 }
 
+
 .animateSection {
   animation: ease-in-out;
   animation-direction: normal;
   animation-duration: 0.7s;
   animation-name: animate-section;
 }
+
 
 @keyframes animate-section {
   0% {
