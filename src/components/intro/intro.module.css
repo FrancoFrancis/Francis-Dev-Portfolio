@@ -4,7 +4,7 @@
 .intro {
   display: flex;
   height: 100vh;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
   position: relative;
   /* background: linear-gradient(90deg,toBottom #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030); */
 }
@@ -85,16 +85,14 @@
   top: 45px;
 }
 
-
-
 .flatButton {
   width: 220px;
   height: 60px;
-  margin-top: 18px;
+  margin-top: 22px;
   cursor: pointer;
   position: relative;
   background-color: #000000;
-  border: 1px #000000 solid;
+  /* border: 3px var(--main-color) solid; */
   border-radius: 20px;
   font-size: 1.9rem;
   letter-spacing: 1px;
@@ -236,7 +234,7 @@
 .intro-title-item {
   height: 50px;
   font-size: 4rem;
-  color: var(--main-color);
+  /* color: var(--main-color); */
   display: flex;
   align-items: center;
 }
@@ -303,7 +301,8 @@
     height: 100vh;
   }
   .intro-left {
-    flex: 1;
+    /* flex: 1; */
+    height: 100vh;
   }
   .scrollDown {
     top: 65vh;
@@ -363,6 +362,8 @@
   .intro-right {
     flex: 1.3;
     position: relative;
+    /* visibility: hidden; */
+    display: none;
   }
 
   .intro-right .me {

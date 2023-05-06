@@ -6,6 +6,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../../../context";
 import styles from "./toggle.module.css";
 import { riseWithFade } from "../../../utils/utils";
+import dynamic from "next/dynamic";
 
 const Toggle = () => {
   const theme = useContext(ThemeContext);
@@ -52,4 +53,5 @@ const Toggle = () => {
   );
 };
 
-export default Toggle;
+// export default Toggle;
+export default dynamic (() => Promise.resolve(Toggle), {ssr: false}  )

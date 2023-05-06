@@ -26,8 +26,9 @@ import { faArrowDown, faArrowDown19 } from "@fortawesome/free-solid-svg-icons";
 // import Design from "../design/design";
 import { FaArrowDown, HiArrowLongDown } from "react-icons/fa";
 import { riseWithFade, staggerChildren } from "../../../utils/utils";
+import dynamic from "next/dynamic";
 
-export default function Intro() {
+const Intro = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme?.state?.darkMode;
 
@@ -188,3 +189,4 @@ export default function Intro() {
   );
 }
 
+export default dynamic (() => Promise.resolve(Intro), {ssr: false}  )

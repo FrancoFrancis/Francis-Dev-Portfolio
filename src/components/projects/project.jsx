@@ -9,10 +9,12 @@ import styles from "./project.module.css";
 import { ThemeContext } from "../../../context";
 import { motion as m } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import dynamic from "next/dynamic";
 
 const Projects = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme?.state?.darkMode;
+
   const { ref: headingRef, inView: headingIsVisible } = useInView();
   const { ref: sectionRef, inView: sectionIsVisible } = useInView();
   return (
@@ -27,10 +29,11 @@ const Projects = () => {
       transition={{ duration: 0.85, ease: "easeOut" }}
     >
       <h1
-        ref={headingRef}
-        className={`${styles.projectsHeading}  ${
-          headingIsVisible ? styles.animateHeading : ""
-        }`}
+      className={styles.projectsHeading}
+        // ref={headingRef}
+        // className={`${styles.projectsHeading}  ${
+        //   headingIsVisible ? styles.animateHeading : ""
+        // }`}
       >
         &lt;Projects/&gt;
       </h1>
@@ -112,7 +115,7 @@ const Projects = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://github.com/FrancoFrancis/HAVEN-HOMES"
+                href="https://github.com/FrancoFrancis/comrade-meme-app"
                 style={{ color: darkMode && "#fff" }}
               >
                 <p>Code</p>
@@ -319,4 +322,5 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+// export default Projects;
+export default dynamic (() => Promise.resolve(Projects), {ssr: false}  )

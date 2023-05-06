@@ -17,7 +17,7 @@ body {
 html{
   font-size: 50.5%;
   scroll-behavior: smooth;
-  scroll-snap-type:y mandatory;
+  /* scroll-snap-type:y mandatory; */
   overflow-y: scroll; 
   height: 100vh;
   font-family: sans-serif;
@@ -51,21 +51,16 @@ code {
 }
 
 ::-webkit-scrollbar{
-  width: 7px;
+  width: 5px;
   height: 50px;
-  cursor: pointer;
-}
-
-::-webkit-scrollbar-track{
-  background-color: whitesmoke;
   cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb{
   background-color:var(--main-color);
-  cursor: grabbing;
   height: 50px;
-  cursor: pointer;
+  cursor: all-scroll;
+  border-radius: 40px;
 }
 
 ::-webkit-scrollbar-thumb:hover{

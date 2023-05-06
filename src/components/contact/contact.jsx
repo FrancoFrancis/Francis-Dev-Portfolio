@@ -8,8 +8,11 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import {
+  faArrowCircleRight,
   faArrowRight,
+  faCheck,
   faCheckCircle,
+  faCircleCheck,
   faLocationDot,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
@@ -17,48 +20,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useRef, useState } from "react";
 import { useContext } from "react";
 import { ThemeContext } from "../../../context";
-import emailjs from "@emailjs/browser";
+import emailjs, { sendForm } from "@emailjs/browser";
 import styles from "./contact.module.css";
 import { motion as m } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-// import Resume from "../public/Francis-TIN.pdf"
+import dynamic from "next/dynamic";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  // const [showMessage, setShowMessage] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
 
   const { ref: headingRef, inView: headingIsVisible } = useInView();
 
   const form = useRef();
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-  //   setName(""); // Clears the name input field
-  //   setSubject(""); // Clears the subject input field
-  //   setEmail(""); // Clears the email input field
-  //   setMessage(""); // Clears the email message field
-  //   setShowMessage(true);
-  //   setTimeout(() => setShowMessage(false), 3000);
 
-  //   emailjs
-  //     .sendForm(
-  //       "service_l2a5yce",
-  //       "template_fvcwldi",
-  //       form.current,
-  //       "vR1oXy0at0XPbe-Xk"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  // };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -66,6 +45,8 @@ const Contact = () => {
     setSubject(""); // Clears the subject input field
     setEmail(""); // Clears the email input field
     setMessage(""); // Clears the email message field
+    setShowMessage(true);
+    setTimeout(() => setShowMessage(false), 3000);
 
     emailjs
       .sendForm(
@@ -77,13 +58,13 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          window.alert("Form submitted successfully!");
         },
         (error) => {
           console.log(error.text);
         }
       );
   };
+
 
   const theme = useContext(ThemeContext);
   const darkMode = theme?.state?.darkMode;
@@ -92,6 +73,7 @@ const Contact = () => {
 
   return (
     <m.div
+    // className={styles.contact}
       ref={sectionRef}
       className={`${styles.contact}  ${
         headingIsVisible ? styles.animateSection : ""
@@ -106,10 +88,11 @@ const Contact = () => {
       <div className={styles["contact-wrapper"]}>
         <div className={styles["contact-left"]}>
           <h1
-            ref={headingRef}
-            className={`${styles.contactHeading}  ${
-              headingIsVisible ? styles.animateHeading : ""
-            }`}
+          className={styles.contactHeading}
+            // ref={headingRef}
+            // className={`${styles.contactHeading}  ${
+            //   headingIsVisible ? styles.animateHeading : ""
+            // }`}
           >
             Contact & Connect
           </h1>
@@ -228,9 +211,9 @@ const Contact = () => {
         {/* RIGHT */}
         <div className={styles["contact-right"]}>
           <p className={styles["desc"]}>
-            I am interested in freelance opportunities - However if you have
-            other requests or questions, there you go, contact me using the form
-            below 😎
+            I am interested in internships and freelance opportunities - However
+            if you have other requests or questions, there you go, contact me
+            using the form below 😎
           </p>
 
           <form
@@ -273,8 +256,7 @@ const Contact = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
-
-            className={styles.textarea}
+              className={styles.textarea}
               cols="30"
               rows="5"
               name="message"
@@ -286,8 +268,9 @@ const Contact = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
-            
+
             <button
+              onClick={sendForm}
               style={{
                 borderColor: darkMode && "#fff",
                 background: darkMode && "transparent",
@@ -295,26 +278,27 @@ const Contact = () => {
                 hover: darkMode && "",
               }}
             >
-              <span>Shoot</span>
-              <FontAwesomeIcon
-                icon={faArrowRight}
+              <span>Shoot</span>↗
+              {/* <FontAwesomeIcon
+                icon={faArrowCircleRight}
                 height={"16"}
                 width={"16"}
                 className="arrow-right"
-              />
+              /> */}
             </button>
           </form>
-          {/* {showMessage && (
+          {showMessage && (
             <div className={styles.popup}>
               <p>
                 Thanks for reaching out <br /> I'll get back to you ASAP 👍🏽!
               </p>
             </div>
-          )} */}
+          )}
         </div>
       </div>
     </m.div>
   );
 };
 
-export default Contact;
+// export default Contact;
+export default dynamic(() => Promise.resolve(Contact), { ssr: false });

@@ -7,6 +7,7 @@ import { ThemeContext } from "../../../context";
 
 import { motion as m } from "framer-motion";
 import { riseWithFade } from "../../../utils/utils";
+import dynamic from "next/dynamic";
 
 const Navbar = () => {
   const theme = useContext(ThemeContext);
@@ -76,4 +77,5 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+// export default Navbar;
+export default dynamic (() => Promise.resolve(Navbar), {ssr: false}  )

@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "./about.module.css";
-// import Me from "../../images/violet-happiness.png"
 import Pattern2 from "../../../public/images/pattern1.webp";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,9 +22,10 @@ import { motion as m } from "framer-motion";
 import { useRef, useEffect, useState, useContext } from "react";
 import { useInView } from "react-intersection-observer";
 import { ThemeContext } from "../../../context";
+import dynamic from "next/dynamic";
 
 const About = () => {
-  const { ref: myRef, inView: myElementIsVisible } = useInView();
+  // const { ref: myRef, inView: myElementIsVisible } = useInView();
   const { ref: headingRef, inView: headingIsVisible } = useInView();
   const { ref: sectionRef, inView: sectionIsVisible } = useInView();
 
@@ -46,10 +46,11 @@ const About = () => {
     >
       <div className={styles["about-left"]}>
         <h1
-          ref={headingRef}
-          className={`${styles.heading}  ${
-            headingIsVisible ? styles.animateHeading : ""
-          }`}
+        className={styles.heading}
+          // ref={headingRef}
+          // className={`${styles.heading}  ${
+          //   headingIsVisible ? styles.animateHeading : ""
+          // }`}
         >
           About me
         </h1>
@@ -99,10 +100,11 @@ const About = () => {
           }`}
         >
           <h1
-            ref={headingRef}
-            className={`${styles.heading}  ${
-              headingIsVisible ? styles.animateHeading : ""
-            }`}
+          className={styles.heading}
+            // ref={headingRef}
+            // className={`${styles.heading}  ${
+            //   headingIsVisible ? styles.animateHeading : ""
+            // }`}
           >
             &lt;Skillset/&gt;{" "}
           </h1>
@@ -158,4 +160,5 @@ const About = () => {
   );
 };
 
-export default About;
+// export default About;
+export default dynamic (() => Promise.resolve(About), {ssr: false}  )

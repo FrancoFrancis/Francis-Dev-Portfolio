@@ -4,6 +4,7 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect } from "react";
 import styles from "./scrollToTop.module.css";
+import dynamic from "next/dynamic";
 
 function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -46,4 +47,5 @@ function ScrollToTop() {
   );
 }
 
-export default ScrollToTop;
+// export default ScrollToTop;
+export default dynamic (() => Promise.resolve(ScrollToTop), {ssr: false}  )
