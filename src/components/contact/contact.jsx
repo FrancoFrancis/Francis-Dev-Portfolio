@@ -270,7 +270,7 @@ const Contact = () => {
             ></textarea>
 
             <button
-              onClick={sendForm}
+              onClick={sendEmail}
               style={{
                 borderColor: darkMode && "#fff",
                 background: darkMode && "transparent",
@@ -289,8 +289,9 @@ const Contact = () => {
           </form>
           {showMessage && (
             <div className={styles.popup}>
+              <faCheckCircle/>
               <p>
-                Thanks for reaching out <br /> I'll get back to you ASAP 👍🏽!
+                Thanks for reaching out <br /> I'll get back to you ASAP ✔
               </p>
             </div>
           )}

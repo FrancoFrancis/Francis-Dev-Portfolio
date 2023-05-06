@@ -3,7 +3,7 @@
   display: flex;
   /* scroll-snap-align: start; */
   /* margin-bottom: 25px; */
-  height: 100vh;
+  /* height: 100vh; */
 
 }
 
@@ -86,9 +86,11 @@
 }
 
 @media screen and (max-width: 480px) {
+
   .about {
+    position: absolute;
     flex-direction: column;
-    height: 200vh;
+    /* height: 200vh; */
   }
 
   .about-left {
@@ -112,12 +114,14 @@
 
   .about-right .skills {
     height: 100%;
+    padding: 10px 0;
   }
 }
 
 @media screen and (max-width: 768px) {
   .about {
     flex-direction: column;
+    
   }
 
   .about-left {
