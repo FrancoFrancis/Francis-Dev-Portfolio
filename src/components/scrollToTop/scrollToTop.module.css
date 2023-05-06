@@ -33,3 +33,12 @@
     transform: translateY(0.8rem);
   }
 }
+
+
+
+@media screen and (max-width: 480px) {
+
+  .scroll-to-top{
+    bottom: 4rem;
+  }
+}

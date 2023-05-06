@@ -88,7 +88,7 @@
 @media screen and (max-width: 480px) {
   .about {
     flex-direction: column;
-    height: 150vh;
+    /* height: 150vh; */
   }
 
   .about-left {
