@@ -113,7 +113,7 @@ const About = () => {
             
             <span
             style={{ backgroundColor: darkMode && "#3d3d3d" }}
-
+            
             > React
             + Next.js</span>
            
