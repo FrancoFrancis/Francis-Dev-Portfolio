@@ -3,7 +3,7 @@
   display: flex;
   /* scroll-snap-align: start; */
   /* margin-bottom: 25px; */
-  /* height: 100vh; */
+  height: 100%;
 
 }
 
@@ -41,8 +41,6 @@
   border-radius: 20px;
   border: 1px solid rgba(111, 111, 111, 0.038);
 }
-
-
 
 .about-right .skills {
   font-size: 1.8rem;
@@ -88,7 +86,7 @@
 @media screen and (max-width: 480px) {
 
   .about {
-    position: absolute;
+    /* position: absolute; */
     flex-direction: column;
     /* height: 200vh; */
   }
@@ -121,7 +119,6 @@
 @media screen and (max-width: 768px) {
   .about {
     flex-direction: column;
-    
   }
 
   .about-left {
