@@ -29,6 +29,7 @@ const Toggle = () => {
       animate="animate"
     >
       <FontAwesomeIcon
+        color="orangered"
         icon={faSun}
         className={styles.Icons}
         alt="toggle icon"
