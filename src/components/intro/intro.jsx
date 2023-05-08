@@ -106,7 +106,7 @@ const Intro = () => {
                   style={{ color: darkMode && "#fff" }}
                 >
                   Gamer
-                  {/* Content Creator */}
+        
                 </div>
                 <div
                   className={styles["intro-title-item"]}
