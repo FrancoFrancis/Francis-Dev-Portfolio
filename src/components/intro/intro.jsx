@@ -90,7 +90,7 @@ const Intro = () => {
               >
                 <div
                   className={styles["intro-title-item"]}
-                  style={{ color: darkMode && "orangered" }}
+                  style={{ color: darkMode && "#fff" }}
                 >
                   Frontend Web Developer
                 </div>

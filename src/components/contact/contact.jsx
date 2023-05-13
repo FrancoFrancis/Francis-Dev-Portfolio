@@ -278,13 +278,13 @@ const Contact = () => {
                 hover: darkMode && "",
               }}
             >
-              <span>Shoot</span>↗
-              {/* <FontAwesomeIcon
-                icon={faArrowCircleRight}
+              <span>Shoot</span>
+              <FontAwesomeIcon
+                icon={faArrowRight}
                 height={"16"}
                 width={"16"}
                 className="arrow-right"
-              /> */}
+              />
             </button>
           </form>
           {showMessage && (
@@ -296,6 +296,11 @@ const Contact = () => {
             </div>
           )}
         </div>
+        <p className={styles["copyright"]}>
+
+        © Francis Etham 2023
+        {/* All Rights Reserved */}
+      </p>
       </div>
     </m.div>
   );

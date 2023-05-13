@@ -79,7 +79,7 @@ export default function Home() {
             <About />
             <Projects />
             <Contact />
-            <Footer />
+            {/* <Footer /> */}
             <ScrollToTop />
           </>
         )}

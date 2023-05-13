@@ -1,4 +1,4 @@
-import styles from "./footer.module.css";
+// import styles from "./footer.module.css";
 import dynamic from "next/dynamic";
 
 import React from "react";
@@ -7,11 +7,11 @@ const Footer = () => {
   return (
     <div className={styles["footer"]}>
       <div className={styles["footer-pattern"]}></div>
-      <p>
+      {/* <p>
         
-        © Francis Etham 2023 <br />
+        © Francis Etham 2023
         All Rights Reserved
-      </p>
+      </p> */}
     </div>
   );
 };

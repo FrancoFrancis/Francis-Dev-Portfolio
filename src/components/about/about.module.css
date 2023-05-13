@@ -85,7 +85,7 @@
   .about {
     flex-direction: column;
     height: 170vh;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
   }
 
   .about-left {
@@ -98,6 +98,7 @@
   }
   .about-right {
     padding: 30px;
+    margin-bottom: 30px;
   }
 
   .about-right .skills h1 {
