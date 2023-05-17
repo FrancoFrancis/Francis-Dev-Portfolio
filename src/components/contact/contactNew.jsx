@@ -32,12 +32,11 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [showMessage, setShowMessage] = useState(false);
+  const ref = useRef;
 
   const { ref: headingRef, inView: headingIsVisible } = useInView();
 
   const form = useRef();
-
-
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -65,15 +64,22 @@ const Contact = () => {
       );
   };
 
-
   const theme = useContext(ThemeContext);
   const darkMode = theme?.state?.darkMode;
 
   const { ref: sectionRef, inView: sectionIsVisible } = useInView();
 
+  useEffect(() => {
+    if (showMessage) {
+      setTimeout(() => {
+        setShowMessage(false);
+      }, 3000);
+    }
+  }, [showMessage]);
+
   return (
     <m.div
-    // className={styles.contact}
+      // className={styles.contact}
       ref={sectionRef}
       className={`${styles.contact}  ${
         headingIsVisible ? styles.animateSection : ""
@@ -88,7 +94,7 @@ const Contact = () => {
       <div className={styles["contact-wrapper"]}>
         <div className={styles["contact-left"]}>
           <h1
-          className={styles.contactHeading}
+            className={styles.contactHeading}
             // ref={headingRef}
             // className={`${styles.contactHeading}  ${
             //   headingIsVisible ? styles.animateHeading : ""
@@ -167,7 +173,7 @@ const Contact = () => {
             <h1 className={styles["say-hello"]}>
               Say hello 👋🏽 <br />{" "}
               <a style={{ color: darkMode && "#fff" }}>
-                
+                {" "}
                 francisetham01@gmail.com
               </a>
             </h1>
@@ -215,7 +221,6 @@ const Contact = () => {
             if you have other requests or questions, there you go, contact me
             using the form below 😎
           </p>
-
           <form
             ref={form}
             onSubmit={sendEmail}
@@ -287,20 +292,37 @@ const Contact = () => {
               />
             </button>
           </form>
-          {showMessage && (
-            <div className={styles.popup}>
-              <faCheckCircle/>
-              <p>
-                Thanks for reaching out <br /> I'll get back to you ASAP <FontAwesomeIcon icon={<faCircleCheck/>}/>
-              </p>
-            </div>
-          )}
+          {/* popup here */}
+          <div>
+            {showMessage && (
+              <div
+                ref={ref}
+                className={`${styles.popup} ${darkMode && "dark-mode"}`}
+                style={{
+                  width: "100vw",
+                  height: "100vh",
+                  top: 0,
+                  left: 0,
+                  position: "fixed",
+                  background: "#fff",
+                  zIndex: 9999,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <div className={styles.popup - content}>
+                  <p>{message}</p>
+                </div>
+              </div>
+            )}
+          </div>
+          ); };
         </div>
         <p className={styles["copyright"]}>
-
-        © Francis Etham 2023
-        {/* All Rights Reserved */}
-      </p>
+          © Francis Etham 2023
+          {/* All Rights Reserved */}
+        </p>
       </div>
     </m.div>
   );

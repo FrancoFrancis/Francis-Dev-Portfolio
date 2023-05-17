@@ -1,6 +1,7 @@
 .scroll-to-top {
   /* background-color: #1c034f ; */
   background-image: url("../../../public/images/pattern1.webp");
+  background-size: cover;
   height: 37px;
   width: 37px;
   display: flex;

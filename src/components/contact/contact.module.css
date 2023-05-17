@@ -119,8 +119,8 @@
   }
 }
 
-/* POPUP */
 
+/* POPUP */
 
 .popup {
   position: absolute;
@@ -187,7 +187,6 @@
   justify-content:flex-start;
   align-items: center;
 }
-
 
 .phone .animateSection {
   margin-right: 15px;
@@ -303,6 +302,11 @@
 
   }
 
+  .copyright{
+    bottom: 2rem;
+   
+  }
+
   
 .popup {
   position: absolute;
@@ -363,7 +367,7 @@
   }
 
   .contact-left .socials div a {
-    border-radius: 50px;
+    border-radius: 1000px;
     padding: 12px;
   }
   .socials h2 {
