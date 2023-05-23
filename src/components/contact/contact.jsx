@@ -37,8 +37,6 @@ const Contact = () => {
 
   const form = useRef();
 
-
-
   const sendEmail = (e) => {
     e.preventDefault();
     setName(""); // Clears the name input field
@@ -65,7 +63,6 @@ const Contact = () => {
       );
   };
 
-
   const theme = useContext(ThemeContext);
   const darkMode = theme?.state?.darkMode;
 
@@ -73,7 +70,7 @@ const Contact = () => {
 
   return (
     <m.div
-    // className={styles.contact}
+      // className={styles.contact}
       ref={sectionRef}
       className={`${styles.contact}  ${
         headingIsVisible ? styles.animateSection : ""
@@ -88,7 +85,7 @@ const Contact = () => {
       <div className={styles["contact-wrapper"]}>
         <div className={styles["contact-left"]}>
           <h1
-          className={styles.contactHeading}
+            className={styles.contactHeading}
             // ref={headingRef}
             // className={`${styles.contactHeading}  ${
             //   headingIsVisible ? styles.animateHeading : ""
@@ -96,7 +93,6 @@ const Contact = () => {
           >
             Contact & Connect
           </h1>
-        
 
           <div className={styles.socials}>
             {/* <h2>Socials</h2> */}
@@ -154,11 +150,15 @@ const Contact = () => {
                 href="https://www.instagram.com/winnermanfrancis/"
                 className="icon"
                 target="_blank"
-                rel="noreferrer" 
+                rel="noreferrer"
                 style={{ backgroundColor: darkMode && "#333" }}
               >
-                <FontAwesomeIcon icon={faInstagram} className="icon"  height={"17"}
-                  width={"17"} />
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="icon"
+                  height={"17"}
+                  width={"17"}
+                />
               </a>
             </div>
           </div>
@@ -170,9 +170,9 @@ const Contact = () => {
             </h1> */}
 
             <span
-             style={{ color: darkMode && "#fff"}}
-             className={styles.email}
-             >                
+              style={{ color: darkMode && "#fff" }}
+              className={styles.email}
+            >
               francisetham01@gmail.com
             </span>
 
@@ -191,31 +191,32 @@ const Contact = () => {
 
             <h2 className={styles.phone}>
               <FontAwesomeIcon
-                style={{ backgroundColor: darkMode ? "#333" : "", color: darkMode ? "#fff"  : ""}}
+                style={{
+                  backgroundColor: darkMode ? "#333" : "",
+                  color: darkMode ? "#fff" : "",
+                }}
                 className={styles.phoneIcon}
                 color="#fff"
                 icon={faPhone}
                 height={"13"}
                 width={"13"}
               />
-              <span>
-              +(234)8105148453
-              </span>
+              <span>+(234)8105148453</span>
             </h2>
 
             <h2 className={styles.location}>
               <FontAwesomeIcon
                 className={styles.locationIcon}
-                style={{ backgroundColor: darkMode ? "#333" : "", color: darkMode ? "#fff"  : "" }}
+                style={{
+                  backgroundColor: darkMode ? "#333" : "",
+                  color: darkMode ? "#fff" : "",
+                }}
                 color=" #fff"
                 icon={faLocationDot}
                 height={"13"}
                 width={"13"}
               />
-              <span>
-
-              Abuja, Nigeria.
-              </span>
+              <span>Abuja, Nigeria.</span>
             </h2>
           </div>
         </div>
@@ -224,8 +225,8 @@ const Contact = () => {
         <div className={styles["contact-right"]}>
           <p className={styles["desc"]}>
             I am interested in internships and freelance opportunities - However
-            if you have other requests or questions, there you go, contact me
-            using the form below 😎
+            if you have other <br /> requests or questions, there you go,
+            contact me using the form below 😎
           </p>
 
           <form
@@ -301,18 +302,18 @@ const Contact = () => {
           </form>
           {showMessage && (
             <div className={styles.popup}>
-              <faCheckCircle/>
+              <faCheckCircle />
               <p>
-                Thanks for reaching out <br /> I'll get back to you ASAP <FontAwesomeIcon icon={<faCircleCheck/>}/>
+                Thanks for reaching out <br /> I'll get back to you ASAP
+                <FontAwesomeIcon icon={<faCircleCheck />} />
               </p>
             </div>
           )}
         </div>
         <p className={styles.copyright}>
-
-        © Francis Etham 2023
-        {/* All Rights Reserved */}
-      </p>
+          © Francis Etham 2023 All Rights Reserved
+          {/* All Rights Reserved */}
+        </p>
       </div>
     </m.div>
   );

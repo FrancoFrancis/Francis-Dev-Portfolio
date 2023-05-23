@@ -1,5 +1,5 @@
 .projects {
-  padding: 100px;
+  padding: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,7 +37,6 @@
 .card {
   margin: 20px 0;
   overflow: hidden;
-  /* background-color: var(--main-color); */
   background-color:  rgb(0, 0, 0);
   height: 50vh;
   width: 47%;
@@ -45,7 +44,6 @@
   color: white;
   border-radius: 10px;
   z-index: 2;
-  /* padding: 10px; */
 }
 
 
@@ -108,9 +106,9 @@
     /* margin-top: 60px; */
   }
 
-  .projects .projects-heading {
+  .projects .projectsHeading {
     margin-bottom: -20;
-    margin-top: 100px;
+    margin-top: 60px;
   }
 
   .card {

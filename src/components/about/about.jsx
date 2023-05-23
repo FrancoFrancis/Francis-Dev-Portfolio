@@ -45,6 +45,7 @@ const About = () => {
       transition={{ duration: 0.85, ease: "easeOut" }}
     >
       <div className={styles["about-left"]}>
+        <span className={styles.border} style={{ backgroundColor: darkMode && " #0e0d0d", borderColor: darkMode && "#333" }}>
         <h1
         className={styles.heading}
           // ref={headingRef}
@@ -90,23 +91,27 @@ const About = () => {
           </p>
           <Image src={Pattern2} alt="Pattern1" className={styles["pattern2"]} />
         </div>
+        {/* border 2*/}
+        </span>
       </div>
 
-      <div className={styles["about-right"]}>
+      <div className={styles.aboutRight}>
+        <span className={styles.border} style={{ backgroundColor: darkMode && " #0e0d0d", borderColor: darkMode && "#333" }}>
+       
         <div
           ref={sectionRef}
           className={`${styles.skills}  ${
             headingIsVisible ? styles.animateSection : ""
           }`}
         >
+           
           <h1
           className={styles.heading}
             // ref={headingRef}
             // className={`${styles.heading}  ${
             //   headingIsVisible ? styles.animateHeading : ""
             // }`}
-          >
-            Skillset
+          >Skillset
             {/* &lt;Skillset/&gt; */}
           </h1>
           <p>
@@ -155,7 +160,9 @@ const About = () => {
             <FontAwesomeIcon icon={faDocker} height={"20"} width={"20"} />{" "}
            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}> Docker</span>
           </p>
+         
         </div>
+        </span>
       </div>
     </m.div>
   );

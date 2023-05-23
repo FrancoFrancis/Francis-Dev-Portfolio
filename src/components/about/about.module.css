@@ -1,17 +1,25 @@
 
 .about {
   display: flex;
-  height: 100vh;
- 
+}
 
+.border{
+  border:5px solid #000 ;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f1f1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .about-left {
   flex: 1;
-  padding: 100px;
+  padding: 70px;
   display: flex;
-  flex-direction: column;
-  position: relative;
+  justify-content: center;
 }
 
 .about-left h1 {
@@ -34,54 +42,70 @@
 
 .pattern2 {
   width: 100%;
-  height: 55px;
+  height: 50px;
   object-fit: cover;
   margin-top: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px solid rgba(111, 111, 111, 0.038);
+  /* display: none; */
 }
 
-.about-right .skills {
+/* .aboutRight .skills {
   font-size: 1.8rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   max-height: 100%;
-  border-radius: 10px;
   padding: 10px 20px;
+  border:3px solid #000 ;
+  border-radius: 10px;
+} */
 
-}
-
-.about-right .skills p {
+.aboutRight .skills p {
   margin: 6.5px 0;
   display: flex;
   align-items: center;
   border-radius: 10px;
 }
-.about-right .skills p span {
-  background-color: rgb(0, 0, 0);
+
+.aboutRight .skills p span {
+  background-color: #000;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2px 5px;
+  height: 20px;
+  padding: 4px 12px;
   margin-left: 15px;
   border-radius: 4px;
   letter-spacing: 0.50px;
+  font-size: 1.55rem;
+
 }
 
-.about-right .skills h1 {
+.aboutRight .skills h1 {
   font-size: 3.7rem;
   margin-bottom: 05px;
   width: 100%;
   height: 55px;
+  /* padding: 0; */
 }
 
-.about-right {
+
+.aboutRight {
   flex: 1;
-  padding: 100px;
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+  
 }
+
+.aboutRight .skills{
+  justify-content: space-evenly;
+
+}
+
 
 @media screen and (max-width: 480px) {
 
@@ -99,19 +123,23 @@
     font-size: 3.7rem;
     margin-top: 30px;
   }
-  .about-right {
+
+  .aboutRight {
     padding: 30px;
     margin-bottom: 30px;
   }
 
-  .about-right .skills h1 {
+  /* .about-right .skills h1 {
     font-size: 3.7rem;
-    width: 90%;
+    width: 100%;
     height: 47px;
-    padding: 13px 0;
+  } */
+
+  .aboutRight .skills .heading{
+    padding-left: 0;
   }
 
-  .about-right .skills {
+  .aboutRight .skills {
     height: 100%;
     padding: 10px 0;
   }
@@ -125,11 +153,12 @@
   .about-left {
     padding: 30px;
   }
-  .about-right {
+
+  .aboutRight {
     padding: 30px;
   }
 
-  .about-right .skills h1 {
+  .aboutRight .skills h1 {
     font-size: 3.7rem;
     width: 90%;
     height: 45px;

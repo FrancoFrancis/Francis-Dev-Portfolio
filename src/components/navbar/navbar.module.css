@@ -27,8 +27,8 @@
   height: 85%;
   border-radius: 15px;
   backdrop-filter: blur(1.62px);
-  /* background-color: black; */
-  background-image: url("../../../public/images/pattern1.webp");
+  background-color: black;
+  /* background-image: url("../../../public/images/pattern1.webp"); */
   margin: 0 5px;
   background-size: cover;
  
@@ -72,12 +72,12 @@
 @media screen and (max-width: 480px) {
   .navbar {
     top: 85%;
-    width: 80%;
-    /* left: 50vw; */
+    width: 90%;
   }
 
   .navbar nav {
-    width: 96.5%;
+    width: 70%;
+    margin: 4px;
    
   }
 }
