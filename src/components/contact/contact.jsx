@@ -96,9 +96,9 @@ const Contact = () => {
           >
             Contact & Connect
           </h1>
-          {/* <h1>Lets Discuss your Project</h1> */}
+        
 
-          <div className={styles["socials"]}>
+          <div className={styles.socials}>
             {/* <h2>Socials</h2> */}
             <div>
               <a
@@ -137,7 +137,7 @@ const Contact = () => {
                   width={"17"}
                 />
               </a>
-              <a
+              {/* <a
                 href="https://francis123.hashnode.dev/"
                 className="icon"
                 target="_blank"
@@ -149,28 +149,32 @@ const Contact = () => {
                   height={"17"}
                   width={"17"}
                 />
-              </a>
-              {/* <a
+              </a> */}
+              <a
                 href="https://www.instagram.com/winnermanfrancis/"
                 className="icon"
                 target="_blank"
                 rel="noreferrer" 
                 style={{ backgroundColor: darkMode && "#333" }}
               >
-                <FontAwesomeIcon icon={faInstagram} className="icon" />
-              </a> */}
+                <FontAwesomeIcon icon={faInstagram} className="icon"  height={"17"}
+                  width={"17"} />
+              </a>
             </div>
           </div>
 
-          <div className={styles["email"]}>
-            <h2>Got a project in mind?</h2>
-            <h1 className={styles["say-hello"]}>
+          <div className={styles.contactDetails}>
+            <h2>Got a project in mind? Say hello 👋🏽</h2>
+            {/* <h1 className={styles.sayHello}>
               Say hello 👋🏽 <br />{" "}
-              <a style={{ color: darkMode && "#fff" }}>
-                
-                francisetham01@gmail.com
-              </a>
-            </h1>
+            </h1> */}
+
+            <span
+             style={{ color: darkMode && "#fff"}}
+             className={styles.email}
+             >                
+              francisetham01@gmail.com
+            </span>
 
             <button
               className={styles["resume-Button"]}
@@ -187,23 +191,31 @@ const Contact = () => {
 
             <h2 className={styles.phone}>
               <FontAwesomeIcon
-                className="icon"
-                color="#252525"
+                style={{ backgroundColor: darkMode ? "#333" : "", color: darkMode ? "#fff"  : ""}}
+                className={styles.phoneIcon}
+                color="#fff"
                 icon={faPhone}
-                height={"20"}
-                width={"20"}
+                height={"13"}
+                width={"13"}
               />
+              <span>
               +(234)8105148453
+              </span>
             </h2>
-            <h2 className={styles.phone}>
+
+            <h2 className={styles.location}>
               <FontAwesomeIcon
-                className="icon"
-                color=" #252525"
+                className={styles.locationIcon}
+                style={{ backgroundColor: darkMode ? "#333" : "", color: darkMode ? "#fff"  : "" }}
+                color=" #fff"
                 icon={faLocationDot}
-                height={"20"}
-                width={"20"}
+                height={"13"}
+                width={"13"}
               />
+              <span>
+
               Abuja, Nigeria.
+              </span>
             </h2>
           </div>
         </div>
@@ -296,7 +308,7 @@ const Contact = () => {
             </div>
           )}
         </div>
-        <p className={styles["copyright"]}>
+        <p className={styles.copyright}>
 
         © Francis Etham 2023
         {/* All Rights Reserved */}

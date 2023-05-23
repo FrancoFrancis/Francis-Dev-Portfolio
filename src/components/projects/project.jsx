@@ -35,7 +35,7 @@ const Projects = () => {
         //   headingIsVisible ? styles.animateHeading : ""
         // }`}
       >
-        &lt;Projects/&gt;
+        Projects
       </h1>
       {/* className='projects-heading' */}
       <div className={styles["cards"]}>

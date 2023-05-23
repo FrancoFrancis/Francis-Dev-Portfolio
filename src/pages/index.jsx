@@ -59,14 +59,14 @@ export default function Home() {
             <h1>Winnerman Francis. </h1>
             <br />
             <span>
-              <RotateLoader
+              <PropagateLoader
                 color={"orangered"}
                 backgroundColor={"black"}
                 loading={loading}
-                size={40}
+                size={20}
                 aria-label="Loading Spinner"
                 data-testid="loader"
-                speedMultiplier={1}
+                speedMultiplier={1.3}
               />
             </span>
           </span>

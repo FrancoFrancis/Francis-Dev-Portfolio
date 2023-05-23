@@ -2,6 +2,7 @@
 .about {
   display: flex;
   height: 100vh;
+ 
 
 }
 
@@ -22,7 +23,7 @@
 .about-left p {
   font-size: 1.95rem;
   line-height: 20px;
-  letter-spacing: 0.18px;
+  letter-spacing: 0.50px;
 }
 
 .hashnode {
@@ -49,6 +50,7 @@
   max-height: 100%;
   border-radius: 10px;
   padding: 10px 20px;
+
 }
 
 .about-right .skills p {
@@ -66,6 +68,7 @@
   padding: 2px 5px;
   margin-left: 15px;
   border-radius: 4px;
+  letter-spacing: 0.50px;
 }
 
 .about-right .skills h1 {

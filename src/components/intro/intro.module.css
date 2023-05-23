@@ -62,14 +62,15 @@
 }
 
 .intro-desc {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: lighter;
   border-radius: 20px;
   color: #616161;
 }
 
 .fav-food {
-  font-size: 2.1rem;
+  font-size: 2.3rem;
+  font-weight: lighter;
   margin-top: 5px;
   font-weight: 360;
   color: #000000;
@@ -87,13 +88,13 @@
 
 .flatButton {
   width: 220px;
-  height: 60px;
+  height: 50px;
   margin-top: 22px;
   cursor: pointer;
   position: relative;
   background-color: #000000;
   /* border: 3px var(--main-color) solid; */
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 1.9rem;
   letter-spacing: 1px;
   text-align: center;
@@ -151,7 +152,7 @@
 
 .scrollDown p {
   writing-mode: vertical-lr;
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 

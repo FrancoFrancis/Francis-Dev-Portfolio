@@ -106,7 +106,8 @@ const About = () => {
             //   headingIsVisible ? styles.animateHeading : ""
             // }`}
           >
-            &lt;Skillset/&gt;{" "}
+            Skillset
+            {/* &lt;Skillset/&gt; */}
           </h1>
           <p>
             <FontAwesomeIcon icon={faReact} height={"20"} width={"20"} /> 

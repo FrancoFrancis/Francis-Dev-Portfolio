@@ -133,16 +133,16 @@ const Intro = () => {
               variants={riseWithFade}
             >
               {/* I develop websites and Web Apps - */}I have deep sense for
-              developing visually stunning and responsive User Interfaces.
+              developing visually stunning  <br /> and responsive User Interfaces.
             </m.div>
 
-            <m.h3
+            <m.div
               variants={riseWithFade}
               className={styles["fav-food"]}
               style={{ color: darkMode && "white" }}
             >
               wanna make me happy? give me rice and chicken stew 🍛
-            </m.h3>
+            </m.div>
 
             <m.span variants={riseWithFade}>
               <Link
