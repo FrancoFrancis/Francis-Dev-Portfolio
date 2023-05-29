@@ -56,14 +56,14 @@ export default function Home() {
       >
         {loading ? (
           <span className={styles.loader}>
-            <h1>Winnerman Francis. </h1>
+            <h1  color={"white"} >Winnerman Francis. </h1>
             <br />
             <span>
-              <PropagateLoader
-                color={"orangered"}
+              <BounceLoader
+                color={"#cc0a00"}
                 backgroundColor={"black"}
                 loading={loading}
-                size={20}
+                size={100}
                 aria-label="Loading Spinner"
                 data-testid="loader"
                 speedMultiplier={1.3}

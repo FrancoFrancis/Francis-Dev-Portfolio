@@ -15,8 +15,9 @@ import React, { useContext } from "react";
 // import TwoLines from "../../../public/images/u-two-lines.svg";
 // import TwoLines1 from "../../../public/images/u-two-lines1.svg";
 
-import Me from "../../../public/images/space.png";
-import zaza from "../../../public/images/zaza.gif";
+// import Me from "../../../public/images/space.png";
+import WalkingWinnerman from "../../../public/images/winnermanfrancis.JPG";
+// import zaza from "../../../public/images/zaza.gif";
 import { Link } from "react-scroll";
 import { ThemeContext } from "../../../context";
 import Image from "next/image";
@@ -54,22 +55,22 @@ const Intro = () => {
             offset={50}
             duration={400}
             className={styles.Logo}
-            style={{ color: darkMode && "orangered" }}
+            style={{ color: darkMode && "#5e17eb" }}
             variants={riseWithFade}
             href="#"
           >
              WF.
           </Link>
 
-          <m.h1
+          {/* <m.h1
             className={styles.helloThere}
             style={{ color: darkMode && "#9696960e" }}
-            // style={{ color: darkMode && "#a8a8a80e" }}
             variants={riseWithFade}
           >
             <h1> Hello</h1>
             <h1> There,</h1>
-          </m.h1>
+          </m.h1> */}
+
           <m.div className={styles.container}>
           
 
@@ -79,7 +80,7 @@ const Intro = () => {
               id="my-text"
               style={{ color: darkMode && "#fff" }}
             >
-              i'm francis.
+              Hello there <br /> i'm  <span> francis.</span>
             </m.h1>
 
             <br />
@@ -128,12 +129,12 @@ const Intro = () => {
               className={styles["intro-desc"]}
               style={{
                 background: darkMode && "",
-                color: darkMode ? "" : "",
+                color: darkMode ? " #636363" : "",
               }}
               variants={riseWithFade}
             >
               {/* I develop websites and Web Apps - */}I have deep sense for
-              developing visually stunning  <br /> and responsive User Interfaces.
+              developing visually <br />  stunning  and  responsive User Interfaces.
             </m.div>
 
             <m.div
@@ -141,7 +142,7 @@ const Intro = () => {
               className={styles["fav-food"]}
               style={{ color: darkMode && "white" }}
             >
-              wanna make me happy? give me rice and chicken stew 🍛
+             big fan of rice and chicken stew 🍛
             </m.div>
 
             <m.span variants={riseWithFade}>
@@ -153,8 +154,8 @@ const Intro = () => {
                 duration={400}
                 className={styles.flatButton}
                 style={{
-                  background: darkMode && "#fff",
-                  color: darkMode ? "#000" : "",
+                  background: darkMode && "#5e17eb",
+                  color: darkMode ? "#fff" : "",
                   borderColor: darkMode ? "#fff" : "",
                 }}
               >
@@ -181,8 +182,21 @@ const Intro = () => {
         </div>
       </div>
 
-      <m.div className={styles["intro-right"]} variants={riseWithFade}>
-        <Image src={Me} alt="3D icon" className={styles.me} />
+      <m.div className={styles["intro-right"]} variants={riseWithFade}
+       style={{
+        background: darkMode && " #00001",
+        color: darkMode ? "" : "",
+      }}
+      >
+        {/* <Image src={Me} alt="3D icon" className={styles.me} /> */}
+        <div className={styles.breathingContainer}>
+        <Image src={WalkingWinnerman} alt="3D icon" className={styles.me} />
+        <div  className={styles.behindme}></div>
+        <div  className={styles.behindme1}></div>
+        <div  className={styles.behindme2}></div>
+        <div  className={styles.behindme3}></div>
+
+        </div>
         
       </m.div>
     </m.div>

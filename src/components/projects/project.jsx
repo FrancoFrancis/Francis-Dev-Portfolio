@@ -42,7 +42,7 @@ const Projects = () => {
         {/* one */}
         <div
           className={styles["card"]}
-          style={{ backgroundColor: darkMode && "orangered" }}
+          style={{ backgroundColor: darkMode && "#0e0d0d", color :darkMode && "#fff" }}
         >
           <div className={styles.pBrowser}
           style={{ backgroundColor: darkMode && "#00000018" }}
@@ -64,13 +64,18 @@ const Projects = () => {
                 href="https://github.com/FrancoFrancis/ortentic-app"
                 style={{ color: darkMode && "#fff" }}
               >
-                <p>Code</p>
+                
+               
+                <p style={{ backgroundColor: darkMode && "#000" }}>
                 <FontAwesomeIcon
                   icon={faCodeBranch}
                   height={"16"}
                   width={"16"}
+                  className={styles.linkIcon}
                   // color="orangered"
                 />
+                Code
+                </p>
               </a>
             </span>
             <span>
@@ -79,9 +84,14 @@ const Projects = () => {
                 rel="noreferrer"
                 href="https://ortentic-app.vercel.app/"
                 style={{ color: darkMode && "#fff" }}
+                
               >
-                <p>Live Demo (under construction)</p>
-                <FontAwesomeIcon icon={faGlobe} height={"16"} width={"16"} />
+                
+                
+                <p style={{ backgroundColor: darkMode && "#000" }}>
+                <FontAwesomeIcon icon={faGlobe} height={"14"} width={"14"} className={styles.linkIcon} />
+                  Live Demo (under construction)
+                  </p>
               </a>
             </span>
           </div>
@@ -93,10 +103,10 @@ const Projects = () => {
         {/* two */}
         <div
           className={styles["card"]}
-          style={{ backgroundColor: darkMode && "#08a308" }}
+          style={{ backgroundColor: darkMode && "#0e0d0d", color :darkMode && "#fff" }}
         >
           <div className={styles.pBrowser} 
-          style={{ backgroundColor: darkMode && "#00000018" }}
+          style={{ backgroundColor: darkMode && "#0e0d0d", color :darkMode && "#fff" }}
           
           >
             <div className="p-circle"></div>
@@ -117,13 +127,18 @@ const Projects = () => {
                 rel="noreferrer"
                 href="https://github.com/FrancoFrancis/comrade-meme-app"
                 style={{ color: darkMode && "#fff" }}
-              >
-                <p>Code</p>
+                >
+                <p style={{ backgroundColor: darkMode && "#000" }}>
                 <FontAwesomeIcon
                   icon={faCodeBranch}
                   height={"16"}
                   width={"16"}
-                />
+                  className={styles.linkIcon}
+                  />
+                  Code
+
+                </p>
+                
               </a>
             </span>
             <span>
@@ -133,8 +148,11 @@ const Projects = () => {
                 href="https://comrade-meme-app.vercel.app/"
                 style={{ color: darkMode && "#fff" }}
               >
-                <p>Live Demo</p>
-                <FontAwesomeIcon icon={faGlobe} height={"16"} width={"16"} />
+                <p style={{ backgroundColor: darkMode && "#000" }}>
+                <FontAwesomeIcon icon={faGlobe} height={"16"} width={"16"}  className={styles.linkIcon} />
+                  Live Demo
+                  </p>
+                
               </a>
             </span>
           </div>
@@ -143,7 +161,7 @@ const Projects = () => {
         {/* three */}
         <div
           className={styles["card"]}
-          style={{ backgroundColor: darkMode && "#2222ed" }}
+          style={{ backgroundColor: darkMode && "#0e0d0d", color :darkMode && "#fff" }}
         >
           <div className={styles.pBrowser} 
           style={{ backgroundColor: darkMode && "#00000018" }}
@@ -166,12 +184,16 @@ const Projects = () => {
                 href="https://github.com/FrancoFrancis/HAVEN-HOMES"
                 style={{ color: darkMode && "#fff" }}
               >
-                <p>Code</p>
+                <p style={{ backgroundColor: darkMode && "#000" }}>
                 <FontAwesomeIcon
                   icon={faCodeBranch}
                   height={"16"}
                   width={"16"}
+                  className={styles.linkIcon}
                 />
+                  Code
+                  </p>
+               
               </a>
             </span>
             <span>
@@ -181,8 +203,10 @@ const Projects = () => {
                 href="https://haven-homes-roan.vercel.app/"
                 style={{ color: darkMode && "#fff" }}
               >
-                <p>Live Demo</p>
-                <FontAwesomeIcon icon={faGlobe} height={"16"} width={"16"} />
+                <p style={{ backgroundColor: darkMode && "#000" }}><FontAwesomeIcon icon={faGlobe} height={"16"} width={"16"}  className={styles.linkIcon} />
+                  Live Demo
+                  </p>
+                
               </a>
             </span>
           </div>
@@ -192,7 +216,7 @@ const Projects = () => {
         {/* four */}
         <div
           className={styles["card"]}
-          style={{ backgroundColor: darkMode && "#5e17eb" }}
+          style={{ backgroundColor: darkMode && "#0e0d0d", color :darkMode && "#fff" }}
         >
           <div className={styles.pBrowser} 
           style={{ backgroundColor: darkMode && "#00000018" }}
@@ -214,12 +238,16 @@ const Projects = () => {
                 href="https://github.com/FrancoFrancis/tenzies-game"
                 style={{ color: darkMode && "#fff" }}
               >
-                <p>Code</p>
+                <p style={{ backgroundColor: darkMode && "#000" }}>
                 <FontAwesomeIcon
                   icon={faCodeBranch}
                   height={"16"}
                   width={"16"}
+                  className={styles.linkIcon}
                 />
+                  Code
+                  </p>
+              
               </a>
             </span>
             <span>
@@ -229,8 +257,11 @@ const Projects = () => {
                 href="https://tenzies-game-flax.vercel.app/"
                 style={{ color: darkMode && "#fff" }}
               >
-                <p>Live Demo</p>
-                <FontAwesomeIcon icon={faGlobe} height={"16"} width={"16"} />
+                <p style={{ backgroundColor: darkMode && "#000" }}>
+                <FontAwesomeIcon icon={faGlobe} height={"16"} width={"16"} className={styles.linkIcon} />
+
+                  Live Demo
+                  </p>
               </a>
             </span>
           </div>
@@ -239,7 +270,7 @@ const Projects = () => {
         {/* five*/}
         <div
           className={styles["card"]}
-          style={{ backgroundColor: darkMode && "RED" }}
+          style={{ backgroundColor: darkMode && "#0e0d0d", color :darkMode && "#fff" }}
         >
           <div className={styles.pBrowser}
           style={{ backgroundColor: darkMode && "#00000018" }}
@@ -254,6 +285,7 @@ const Projects = () => {
             <p>HTML + CSS + JavaScript</p>
             <p> Tesla official website clone </p>
 
+
             <span>
               <a
                 target="_blank"
@@ -261,12 +293,16 @@ const Projects = () => {
                 href="https://github.com/FrancoFrancis/tesla-website-clone"
                 style={{ color: darkMode && "#fff" }}
               >
-                <p>Code</p>
+                <p style={{ backgroundColor: darkMode && "#000" }}>
                 <FontAwesomeIcon
                   icon={faCodeBranch}
                   height={"16"}
                   width={"16"}
+                  className={styles.linkIcon}
                 />
+                  Code
+                  </p>
+                
               </a>
             </span>
             <span>
@@ -276,8 +312,11 @@ const Projects = () => {
                 href="linkedin.com"
                 style={{ color: darkMode && "#fff" }}
               >
-                <p>Live Demo</p>
-                <FontAwesomeIcon icon={faGlobe} height={"16"} width={"16"} />
+                <p style={{ backgroundColor: darkMode && "#000" }}>
+                <FontAwesomeIcon icon={faGlobe} height={"16"} width={"16"} className={styles.linkIcon} />
+                  Live Demo
+                  </p>
+               
               </a>
             </span>
           </div>
@@ -286,7 +325,7 @@ const Projects = () => {
         {/* six */}
         <div
           className={styles["card"]}
-          style={{ backgroundColor: darkMode && "#333" }}
+          style={{ backgroundColor: darkMode && "#0e0d0d", color :darkMode && "#fff" }}
         >
           <div className={styles.pBrowser}
           style={{ backgroundColor: darkMode && "#00000018" }}
@@ -307,8 +346,11 @@ const Projects = () => {
                 href="https://github.com/FrancoFrancis"
                 style={{ color: darkMode && "#fff" }}
               >
-                <p>Go-to my GitHub for more...</p>
-                <FontAwesomeIcon icon={faGithub} height={"16"} width={"16"} />
+                <p style={{ backgroundColor: darkMode && "#333" }}>
+                <FontAwesomeIcon icon={faGithub} height={"16"} width={"16"} className={styles.linkIcon} />
+                  Go-to my GitHub for more...
+                  </p>
+                
               </a>
             </span>
           </div>

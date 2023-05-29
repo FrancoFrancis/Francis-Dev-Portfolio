@@ -225,7 +225,7 @@ const Contact = () => {
         <div className={styles["contact-right"]}>
           <p className={styles["desc"]}>
             I am interested in internships and freelance opportunities - However
-            if you have other <br /> requests or questions, there you go,
+            if you have other <br /> suggestions, requests or questions, there you go,
             contact me using the form below 😎
           </p>
 
@@ -302,18 +302,19 @@ const Contact = () => {
           </form>
           {showMessage && (
             <div className={styles.popup}>
-              <faCheckCircle />
               <p>
-                Thanks for reaching out <br /> I'll get back to you ASAP
                 <FontAwesomeIcon icon={<faCircleCheck />} />
+                <br />
+                
+                Thanks for reaching out <br /> I'll get back to you ASAP
               </p>
+
+              
+
             </div>
           )}
         </div>
-        <p className={styles.copyright}>
-          © Francis Etham 2023 All Rights Reserved
-          {/* All Rights Reserved */}
-        </p>
+      
       </div>
     </m.div>
   );

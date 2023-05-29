@@ -9,9 +9,9 @@
   justify-content: center;
   position: fixed;
   bottom: 3.6rem;
-  right: 4rem;
+  right: 3rem;
   color: white;
-  border-radius: 10px;
+  border-radius: 50px;
   z-index: 888;
   cursor: pointer;
   padding: 3px;

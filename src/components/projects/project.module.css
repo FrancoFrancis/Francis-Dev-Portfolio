@@ -37,26 +37,28 @@
 .card {
   margin: 20px 0;
   overflow: hidden;
-  background-color:  rgb(0, 0, 0);
+  border: 1px solid #000;
+  background-color:  #f2f1f1;
+  /*  */
   height: 50vh;
   width: 47%;
   position: relative;
-  color: white;
-  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  border-radius: 40px;
   z-index: 2;
+  /* padding-left: 30px; */
 }
 
 
-
-.pBrowser {
+/* .pBrowser {
   position: relative;
-  height: 11px;
+  height: 7px;
   display: flex;
   align-items: center;
   background-size: cover;
   background-position: center;
-  background-color: #252525;
-}
+  background-color: #b1b0b0;
+} */
 
 .pcircle {
   position: absolute;
@@ -71,8 +73,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 70px 20px;
-  
+  padding: 70px 30px;  
 }
 
 .content h1 {
@@ -92,13 +93,31 @@
 .content span a {
   display: flex;
   font-size: 1.8rem;
-  color: #c7c7c7;
+  color: #fefefe;
   text-transform: capitalize;
 }
 
 .content span p {
-  margin-right: 20px;
+  /* margin-left: 20px; */
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 13px;
+  border-radius: 30px;
 }
+
+.content span p .linkIcon{
+  margin-right: 10px;
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  padding: 4px ;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @media screen and (max-width: 480px) {
   .projects {

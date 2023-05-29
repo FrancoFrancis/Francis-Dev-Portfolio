@@ -11,8 +11,15 @@
 
 .intro-left {
   flex: 1;
-  color: #000000;
+  color:var(--white);
   z-index: 2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
 }
 
 
@@ -44,13 +51,19 @@
 }
 
 .introName {
-  font-size: 8rem;
+  /* color:#; */
+  font-size: 6.5rem;
   text-transform: capitalize;
   letter-spacing: 1px;
   font-weight: bolder;
   max-width: 100%;
   font-family: "ClashGrotesk";
   src: url("../../styles/fonts/ClashGrotesk-Variable.woff2") format("woff2");
+}
+
+.introName span {
+  color: var(--main-color);
+  font-weight: bold;
 }
 
 .intro-hi {
@@ -65,7 +78,8 @@
   font-size: 2.3rem;
   font-weight: lighter;
   border-radius: 20px;
-  color: #616161;
+  color: var(--desc-gray);
+  /* color: #616161; */
 }
 
 .fav-food {
@@ -84,6 +98,7 @@
   position: absolute;
   left: -15px;
   top: 45px;
+  display: none;
 }
 
 .flatButton {
@@ -92,9 +107,9 @@
   margin-top: 22px;
   cursor: pointer;
   position: relative;
-  background-color: #000000;
-  /* border: 3px var(--main-color) solid; */
-  border-radius: 10px;
+  background-color: var(--main-color);
+  border: 1px var(--main-color) solid;
+  border-radius: 55px;
   font-size: 1.9rem;
   letter-spacing: 1px;
   text-align: center;
@@ -104,7 +119,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  color: whitesmoke;
+  color: rgb(0, 0, 0);
   z-index: 4;
 }
 
@@ -115,7 +130,7 @@
   height: 0%;
   bottom: 0;
   left: 0;
-  background-color: var(--main-color);
+  background-color: #fff;
   /* background: linear-gradient(90deg, #cc0a00, #d42904, #db3b0a, #e24b11, #ea5918, #f16720, #f87328, #ff8030); */
   color: rgb(8, 8, 8);
   display: flex;
@@ -147,6 +162,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  display: none;
   
 }
 
@@ -213,7 +229,7 @@
 }
 
 .flat-button:hover {
-  background-color: #000000;
+  background-color: var(--main-dark);
   color: #ffffff;
 }
 
@@ -235,7 +251,7 @@
 .intro-title-item {
   height: 50px;
   font-size: 4rem;
-  /* color: var(--main-color); */
+  color: var(--dark-gray);
   display: flex;
   align-items: center;
 }
@@ -268,20 +284,88 @@
 }
 
 .intro-right .me {
-
-  position: relative;
-  top: -117px;
-  height: 700px;
-  width: 700px;
+  /* background-image: url(../../../public/images/winnermanfrancis.JPG); */
+  background-size: cover;
+  top: 130px;
+  left: 210px;
+  height: 46rem;
+  width: 46rem;
+  border-radius: 100%;
   position: absolute;
-  object-fit: cover;
+  object-fit: fill;
   overflow: hidden;
   animation-name: breathing;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  /* rotate: -300deg; */
+  background-color: var(--main-color);
+  z-index: 7;
+  /* border: 5px solid var(--main-color); */
 }
+
+/* INTRO DESIGN */
+
+.intro-right .behindme {
+  background-color: #000000;
+  height: 46rem;
+  width: 46rem;
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  border-radius: 100%;
+  z-index: 6;
+  animation-name: breathing1;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.intro-right .behindme1 {
+  background-color:#fff;
+  height: 46rem;
+  width: 46rem;
+  position: absolute;
+  top: 110px;
+  left: 190px;
+  border-radius: 100%;
+  z-index: 5;
+  animation-name: breathing2;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.intro-right .behindme2 {
+  background-color:#000;
+  height: 46rem;
+  width: 46rem;
+  position: absolute;
+  top: 100px;
+  left: 180px;
+  border-radius: 100%;
+  z-index: 4;
+  animation-name: breathing3;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.intro-right .behindme3 {
+  background-color:var(--main-color);
+  height: 46rem;
+  width: 46rem;
+  position: absolute;
+  top:90px;
+  left: 170px;
+  border-radius: 100%;
+  z-index: 3;
+  animation-name: breathing4;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+
 
 @keyframes breathing {
   0% {
@@ -293,6 +377,58 @@
   }
   100% {
     transform: scale(0.981);
+  }
+}
+
+
+@keyframes breathing1 {
+  0% {
+    /* transform: translateX(5px); */
+    transform: scale(0.961);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.961);
+  }
+}
+
+@keyframes breathing2 {
+  0% {
+    /* transform: translateX(5px); */
+    transform: scale(0.941);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.941);
+  }
+}
+
+@keyframes breathing3 {
+  0% {
+    /* transform: translateX(5px); */
+    transform: scale(0.921);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.921);
+  }
+}
+@keyframes breathing4 {
+  0% {
+    /* transform: translateX(5px); */
+    transform: scale(0.905);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.900);
   }
 }
 
@@ -364,6 +500,10 @@
     flex: 1.3;
     position: relative;
     /* visibility: hidden; */
+    /* display: none; */
+  }
+
+  .intro-right .behindme, .behindme1, .behindme2, .behindme3{
     display: none;
   }
 
@@ -371,56 +511,67 @@
     height: 450px;
     width: 450px;
     position: absolute;
-    top: -50px;
+    top: 50px;
     left: -25px;
-    object-fit: cover;
+    object-fit: fill;
     overflow: hidden;
+    border-radius: 40px;
     /* display: none; */
   }
 
 }
 
 
-@media screen and (max-width: 1118px){
 
-  .intro{
-    flex-direction: column;
-    flex: 1;
-  }
-
-  .intro-right img {
-    top: 0px;
-    left: 0px;
-    height: 490px;
-    width: 490px;
-  }
-
-  .intro-right{
-    flex: 1;
-  }
-
-}
-
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 987px) {
 
   .intro {
     flex-direction: column;
     height: 100vh;
   }
 
+  .intro .scroll{
+    display: none;
+  }
+
   .intro-left {
     flex: 1.5;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+/* .intro-title-wrapper {
+  height: 100%;
+  animation: move 10s ease-in-out infinite alternate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+
+  .container {
+    align-self: center;
+    /* align-items: center; */
+  }
+
+  .breathingContainer{
+    align-self: center;
   }
 
   .Logo {
     top: -30px;
+  }
+  .scrollDown{
+    display: none;
   }
 
   .intro-left-wrapper {
     margin-top: 50px;
     padding: 30px;
     height: 100%;
+    position: relative;
   }
 
   .pattern1 {
@@ -455,12 +606,123 @@
     font-size: 6rem;
   }
 
-  .intro-right img {
-    position: relative;
-    top: -100px;
-    width: 500px;
-    height: 500px;
+
+  .intro-right{
+    /* background-color: var(--main-color); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .intro-right .me{
+    top: 0;
+    width: 100%;
+    align-self: center;
+  }
+
+  .intro-right .me {
+    /* background-image: url(../../../public/images/winnermanfrancis.JPG); */
+    background-size: cover;
+    top: 60px;
+    left: 210px;
+    height: 46rem;
+    width: 46rem;
+    border-radius: 100%;
+    position: absolute;
+    object-fit: fill;
+    overflow: hidden;
+    animation-name: breathing;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    background-color: var(--main-color);
+    z-index: 7;
+    /* border: 5px solid var(--main-color); */
+  }
+  
+  /* INTRO DESIGN */
+  
+  .intro-right .behindme {
+    background-color: #000000;
+    height: 46rem;
+    width: 46rem;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    border-radius: 100%;
+    z-index: 6;
+    animation-name: breathing1;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .intro-right .behindme1 {
+    background-color:#fff;
+    height: 46rem;
+    width: 46rem;
+    position: absolute;
+    top: 40px;
+    left: 190px;
+    border-radius: 100%;
+    z-index: 5;
+    animation-name: breathing2;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .intro-right .behindme2 {
+    background-color:#000;
+    height: 46rem;
+    width: 46rem;
+    position: absolute;
+    top: 30px;
+    left: 180px;
+    border-radius: 100%;
+    z-index: 4;
+    animation-name: breathing3;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .intro-right .behindme3 {
+    background-color:var(--main-color);
+    height: 46rem;
+    width: 46rem;
+    position: absolute;
+    top:20px;
+    left: 170px;
+    border-radius: 100%;
+    z-index: 3;
+    animation-name: breathing4;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+}
+
+
+@media screen and (max-width: 480px){
+  .intro-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
+
+  .breathingContainer{
+    align-self: center;
+  }
+
+  .intro-right .me{
+    top: 20px;
+    left: 20px;
+  }
+
 }
 
 /* Section Fade in Animation */
