@@ -394,6 +394,7 @@
   }
 }
 
+
 @keyframes breathing2 {
   0% {
     /* transform: translateX(5px); */
@@ -437,10 +438,12 @@
     flex-direction: column;
     height: 100vh;
   }
+
   .intro-left {
     /* flex: 1; */
     height: 100vh;
   }
+
   .scrollDown {
     top: 65vh;
   }
@@ -499,24 +502,24 @@
   .intro-right {
     flex: 1.3;
     position: relative;
-    /* visibility: hidden; */
-    /* display: none; */
   }
 
-  .intro-right .behindme, .behindme1, .behindme2, .behindme3{
-    display: none;
-  }
+  /* .intro-right .behindme, .behindme1, .behindme2, .behindme3 */
 
   .intro-right .me {
     height: 450px;
     width: 450px;
-    position: absolute;
+    position: relative;
     top: 50px;
     left: -25px;
     object-fit: fill;
     overflow: hidden;
     border-radius: 40px;
     /* display: none; */
+  }
+
+  .intro-right .behindme, .behindme1, .behindme2, .behindme3{
+    display: none;
   }
 
 }
@@ -710,8 +713,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
   }
 
   .breathingContainer{

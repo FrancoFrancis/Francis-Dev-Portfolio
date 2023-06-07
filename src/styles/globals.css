@@ -58,14 +58,14 @@ code {
 }
 
 ::-webkit-scrollbar{
-  width: 5px;
+  width: 8px;
   height: 50px;
   cursor: pointer;
 }
 
 
 ::-webkit-scrollbar-thumb{
-  background-color :rgb(33, 32, 32);
+  background-color :#212020;
   height: 50px;
   cursor: all-scroll;
   border-radius: 40px;
@@ -74,4 +74,5 @@ code {
 
 ::-webkit-scrollbar-thumb:hover{
   cursor: pointer;
+  background-color:#393838 ;
 }

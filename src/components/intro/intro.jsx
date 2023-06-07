@@ -195,7 +195,7 @@ const Intro = () => {
         <div  className={styles.behindme1}></div>
         <div  className={styles.behindme2}></div>
         <div  className={styles.behindme3}></div>
-
+        
         </div>
         
       </m.div>

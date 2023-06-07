@@ -71,7 +71,7 @@ const About = () => {
           <br />
           <p className={styles.about - 2}>
             When I'm not coding or surfing the internet, you will finding me
-            reading books/e-books, writing song lyrics, watching tv series,
+            writing music, reading books/e-books, watching tv series,
             learning a new tool, working on my personal development or playing
             basketball. I also enjoy writing articles on
             <a

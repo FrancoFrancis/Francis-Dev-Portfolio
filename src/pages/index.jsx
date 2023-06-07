@@ -56,11 +56,11 @@ export default function Home() {
       >
         {loading ? (
           <span className={styles.loader}>
-            <h1  color={"white"} >Winnerman Francis. </h1>
+            <h1 className="winnerman"  color={"white"} >Winnerman Francis. </h1>
             <br />
             <span>
               <BounceLoader
-                color={"#cc0a00"}
+                color={"#5e17eb"}
                 backgroundColor={"black"}
                 loading={loading}
                 size={100}
@@ -79,7 +79,7 @@ export default function Home() {
             <About />
             <Projects />
             <Contact />
-            {/* <Footer /> */}
+            <Footer />
             <ScrollToTop />
           </>
         )}
