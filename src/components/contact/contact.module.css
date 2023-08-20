@@ -237,7 +237,7 @@
   margin: 10px 0;
   color: black;
   text-indent: 17px;
-  background-color: #f0f0f0;
+  background-color: #b8b7b7;
 }
 
 .contact-form .textarea {
@@ -245,7 +245,7 @@
   text-indent: 17px;
   border: none;
   outline: none;
-  background-color: rgb(240, 240, 240);
+  background-color: #b8b7b7;
   padding-top: 20px;
   font-size: 1.8rem;
   border-radius: 20px;

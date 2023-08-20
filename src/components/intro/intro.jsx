@@ -101,7 +101,7 @@ const Intro = () => {
                 >
                   Entrepreneur
                 </div>
-              
+          
                 <div
                   className={styles["intro-title-item"]}
                   style={{ color: darkMode && "#fff" }}

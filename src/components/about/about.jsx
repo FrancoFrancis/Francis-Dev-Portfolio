@@ -64,8 +64,7 @@ const About = () => {
             responsive user interfaces that are both aesthetically pleasing and
             highly functional. I am a naturally curious & confident person
             and I work on improving my developer skills one pixel at
-            a time. I'm an entrepreneur with passion and vision for building
-            innovative tech solutions in Nigeria, Africa  and the world at large.
+            a time. I'm an entrepreneur driven to create innovative tech solutions in Nigeria, Africa  and the world at large.
           </p>
 
           <br />
@@ -120,8 +119,7 @@ const About = () => {
             <span
             style={{ backgroundColor: darkMode && "#3d3d3d" }}
             
-            > React
-            + Next.js</span>
+            > React / Next.js</span>
            
           </p>
           <p>
@@ -150,7 +148,7 @@ const About = () => {
           </p>
           <p>
             <FontAwesomeIcon icon={faBootstrap} height={"20"} width={"20"} />{" "}
-            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}>BootStrap</span>
+            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}>TailWinds</span>
           </p>
           <p>
             <FontAwesomeIcon icon={faFigma} height={"20"} width={"20"} />

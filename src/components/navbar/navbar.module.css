@@ -9,11 +9,11 @@
   padding: 5px 3px;
   z-index: 33;
   border-radius: 55px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   color: #000;
   /* backdrop-filter: blur(1.62px); */
   /* background-color: var(--main-color); */
-  background-color: rgb(226, 226, 7);
+  /* background-color: rgb(226, 226, 7); */
 }
 
 .navbar nav {
@@ -71,7 +71,7 @@
 
 @media screen and (max-width: 480px) {
   .navbar {
-    top: 85%;
+    top: 80%;
     width: 90%;
   }
 

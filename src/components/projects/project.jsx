@@ -53,7 +53,7 @@ const Projects = () => {
           </div>
 
           <div className={styles["content"]}>
-            <h1>Ortentic Nigeria </h1>
+            <h1>Ortentic </h1>
             <p>REACT + SASS + STRAPI + STRIPE</p>
             <p>E - commerce App for clothing and foreign used items </p>
 
@@ -87,7 +87,6 @@ const Projects = () => {
                 
               >
                 
-                
                 <p style={{ backgroundColor: darkMode && "#000" }}>
                 <FontAwesomeIcon icon={faGlobe} height={"14"} width={"14"} className={styles.linkIcon} />
                   Live Demo (under construction)
@@ -115,17 +114,17 @@ const Projects = () => {
           </div>
 
           <div className={styles["content"]}>
-            <h1>Comrade Meme App</h1>
-            <p>REACT + SASS</p>
+            <h1>Blink Bank</h1>
+            <p>Nextjs + Tailwinds CSS</p>
             <p className={styles["desc"]}>
-              App for popular viral meme built with React{" "}
+              Banking Website{" "}
             </p>
 
             <span>
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://github.com/FrancoFrancis/comrade-meme-app"
+                href="https://github.com/FrancoFrancis/Blink-Bank"
                 style={{ color: darkMode && "#fff" }}
                 >
                 <p style={{ backgroundColor: darkMode && "#000" }}>
@@ -145,7 +144,7 @@ const Projects = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://comrade-meme-app.vercel.app/"
+                href="https://blink-bank.vercel.app/"
                 style={{ color: darkMode && "#fff" }}
               >
                 <p style={{ backgroundColor: darkMode && "#000" }}>
