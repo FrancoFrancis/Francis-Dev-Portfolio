@@ -7,6 +7,7 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+
 import {
   faArrowCircleRight,
   faArrowRight,
@@ -16,6 +17,7 @@ import {
   faLocationDot,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useRef, useState } from "react";
 import { useContext } from "react";
@@ -309,8 +311,7 @@ const Contact = () => {
                 Thanks for reaching out <br /> I'll get back to you ASAP
               </p>
 
-              
-
+            
             </div>
           )}
         </div>

@@ -25,9 +25,9 @@
   height: 100%;
   border-radius: 30px;
   backdrop-filter: blur(1.62px);
-  background-color: #000;
+  /* background-color: #000; */
   border: 1px solid gray;
-  background-image: url("../../../public/images/pattern1.webp");
+  background-image: url("../../images/pattern1.webp");
   margin: 0 0px;
   background-size: cover;
   color: #ffffff;

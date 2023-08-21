@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./about.module.css";
-import Pattern2 from "../../../public/images/pattern1.webp";
+import { pattern1 } from "@/images";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -88,7 +88,7 @@ const About = () => {
             Lately I am happiest when creating, learning, thinking and exploring
             how to make things better.
           </p>
-          <Image src={Pattern2} alt="Pattern1" className={styles["pattern2"]} />
+          <Image src={pattern1} alt="Pattern1" className={styles["pattern2"]} />
         </div>
         {/* border 2*/}
         </span>

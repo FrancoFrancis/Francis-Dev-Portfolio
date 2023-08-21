@@ -110,7 +110,7 @@
   margin-top: 22px;
   cursor: pointer;
   position: relative;
-  background-color: var(--main-color);
+  background-color: #000;
   border: 1px var(--main-color) solid;
   border-radius: 55px;
   font-size: 1.9rem;
@@ -147,7 +147,7 @@
 .flatButton:hover:before {
   height: 100%;
   z-index: -1;
-  color: #000000;
+  color: #ffffff;
   z-index: -3;
 }
 
@@ -219,7 +219,7 @@
 .flat-button1 {
   width: 62%;
   height: 5px;
-  background-image: url("../../../public/images/pattern4.jpg");
+  background-image: url("../../images/pattern4.jpg");
   background-size: cover;
   color: #ffffff;
   margin-top: 20px;
@@ -494,7 +494,7 @@
   .flat-button1 {
     width: 70%;
     height: 60px;
-    background-image: url("../../../public/images/pattern4.jpg");
+    background-image: url("../../images/pattern4.jpg");
     background-size: cover;
     color: #ffffff;
     margin-top: 20px;
@@ -603,7 +603,7 @@
   .flat-button1 {
     width: 70%;
     height: 60px;
-    background-image: url("../../../public/images/pattern4.jpg");
+    background-image: url("../../images/pattern4.jpg");
     background-size: cover;
     color: #ffffff;
     margin-top: 20px;
@@ -726,18 +726,30 @@
 
 @media screen and (max-width: 480px){
   .intro-right{
+    background-color: yellow;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .breathingContainer{
-    align-self: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(250, 250, 250);
+    position: relative;
+    height: 100%;
+    width: 100%;
   }
 
   .intro-right .me{
-    top: 20px;
-    left: 20px;
+    position: initial;
+  }
+
+  .behindme, .behindme1,.behindme2,.behindme3{
+    /* display: none; */
   }
 
 }

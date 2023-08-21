@@ -28,7 +28,7 @@
     width: 23.5px;
     height: 23.5px;
     border-radius: 30px;
-    background-image: url("../../../public/images/pattern1.webp");
+    background-image: url("../../images/pattern1.webp");
     background-size: cover;
     cursor: pointer;
     margin: 0 3px;

@@ -37,7 +37,7 @@
 .footerPattern {
   width: 10px;
   height: 100%;
-  background-image: url("../../../public/images/pattern1.webp");
+  background-image: url("../../images/pattern1.webp");
   background-size: cover;
   position: absolute;
   left: 0;

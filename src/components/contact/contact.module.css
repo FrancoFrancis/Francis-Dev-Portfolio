@@ -9,7 +9,8 @@
 .contact-pattern {
   width: 10px;
   height: 100%;
-  background-image: url("../../../public/images/pattern1.webp");
+  background-image: url("../../images/pattern1.webp");
+  /* background-image: url("../../../public/images/pattern1.webp"); */
   background-size: cover;
   position: absolute;
 }
@@ -237,7 +238,8 @@
   margin: 10px 0;
   color: black;
   text-indent: 17px;
-  background-color: #b8b7b7;
+  background-color:  #f2f1f1;
+
 }
 
 .contact-form .textarea {
@@ -245,7 +247,7 @@
   text-indent: 17px;
   border: none;
   outline: none;
-  background-color: #b8b7b7;
+  background-color:  #f2f1f1;
   padding-top: 20px;
   font-size: 1.8rem;
   border-radius: 20px;

@@ -2,29 +2,15 @@
 
 import styles from "./intro.module.css";
 import { easeOut, motion as m, useInView } from "framer-motion";
-
 import React, { useContext } from "react";
-// import HandDrawn from "../../../public/images/u-code.svg";
-// import Arrow1 from "../../../public/images/u-arrow1.svg";
-// import Arrow2 from "../../../public/images/u-arrow2.svg";
-// import Arrow3 from "../../../public/images/u-arrow3.svg";
-// import CurvedUnderline from "../../../public/images/u-curved-underline.svg";
-// import Hat from "../../../public/images/u-party-hat.svg";
-// import Rocket from "../../../public/images/u-rocket.svg";
-// import Star from "../../../public/images/u-star.svg";
-// import TwoLines from "../../../public/images/u-two-lines.svg";
-// import TwoLines1 from "../../../public/images/u-two-lines1.svg";
+import { francis, winnerman } from "@/images";
 
-// import Me from "../../../public/images/space.png";
-import WalkingWinnerman from "../../../public/images/winnermanfrancis.JPG";
-// import zaza from "../../../public/images/zaza.gif";
 import { Link } from "react-scroll";
 import { ThemeContext } from "../../../context";
 import Image from "next/image";
 import { container, item } from "../../../animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faArrowDown19 } from "@fortawesome/free-solid-svg-icons";
-// import Design from "../design/design";
 import { FaArrowDown, HiArrowLongDown } from "react-icons/fa";
 import { riseWithFade, staggerChildren } from "../../../utils/utils";
 import dynamic from "next/dynamic";
@@ -188,9 +174,12 @@ const Intro = () => {
         color: darkMode ? "" : "",
       }}
       >
-        {/* <Image src={Me} alt="3D icon" className={styles.me} /> */}
         <div className={styles.breathingContainer}>
-        <Image src={WalkingWinnerman} alt="3D icon" className={styles.me} />
+        {/* <Image src={Me} alt="3D icon" className={styles.me} /> */}
+        {/* <Image src={Me} alt="3D icon" className={styles.me} /> */}
+        {/* <Image src={Me} alt="3D icon" className={styles.me} /> */}
+        {/* <Image src={francis} alt="3D icon" className={styles.me} /> */}
+        <Image src={winnerman} alt="3D icon" className={styles.me} />
         <div  className={styles.behindme}></div>
         <div  className={styles.behindme1}></div>
         <div  className={styles.behindme2}></div>
