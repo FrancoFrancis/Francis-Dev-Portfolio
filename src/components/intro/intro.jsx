@@ -170,15 +170,11 @@ const Intro = () => {
 
       <m.div className={styles["intro-right"]} variants={riseWithFade}
        style={{
-        background: darkMode && " #00001",
+        background: darkMode && "#0000",
         color: darkMode ? "" : "",
       }}
       >
         <div className={styles.breathingContainer}>
-        {/* <Image src={Me} alt="3D icon" className={styles.me} /> */}
-        {/* <Image src={Me} alt="3D icon" className={styles.me} /> */}
-        {/* <Image src={Me} alt="3D icon" className={styles.me} /> */}
-        {/* <Image src={francis} alt="3D icon" className={styles.me} /> */}
         <Image src={winnerman} alt="3D icon" className={styles.me} />
         <div  className={styles.behindme}></div>
         <div  className={styles.behindme1}></div>
