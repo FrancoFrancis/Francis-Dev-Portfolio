@@ -1,32 +1,31 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import {
   faGithub,
-  faHashnode,
   faInstagram,
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-
 import {
-  faArrowCircleRight,
   faArrowRight,
-  faCheck,
   faCheckCircle,
-  faCircleCheck,
   faLocationDot,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useRef, useState } from "react";
-import { useContext } from "react";
-import { ThemeContext } from "../../../context";
-import emailjs, { sendForm } from "@emailjs/browser";
-import styles from "./contact.module.css";
+import emailjs from "@emailjs/browser";
 import { motion as m } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import dynamic from "next/dynamic";
+import styles from "./contact.module.css";
+
+const socials = [
+  { href: "https://twitter.com/EthamFrancis", icon: faTwitter, label: "Twitter" },
+  { href: "https://www.linkedin.com/in/francis-etham-207202202/", icon: faLinkedin, label: "LinkedIn" },
+  { href: "https://github.com/FrancoFrancis", icon: faGithub, label: "GitHub" },
+  { href: "https://www.instagram.com/winnermanfrancis/", icon: faInstagram, label: "Instagram" },
+];
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -34,19 +33,16 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [showMessage, setShowMessage] = useState(false);
-
-  const { ref: headingRef, inView: headingIsVisible } = useInView();
-
   const form = useRef();
+
+  const { ref: sectionRef, inView: sectionIsVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.15,
+  });
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setName(""); // Clears the name input field
-    setSubject(""); // Clears the subject input field
-    setEmail(""); // Clears the email input field
-    setMessage(""); // Clears the email message field
     setShowMessage(true);
-    setTimeout(() => setShowMessage(false), 3000);
 
     emailjs
       .sendForm(
@@ -55,271 +51,121 @@ const Contact = () => {
         form.current,
         "vR1oXy0at0XPbe-Xk"
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      .catch((error) => {
+        console.log(error.text);
+      });
+
+    setName("");
+    setSubject("");
+    setEmail("");
+    setMessage("");
+    setTimeout(() => setShowMessage(false), 3000);
   };
 
-  const theme = useContext(ThemeContext);
-  const darkMode = theme?.state?.darkMode;
-
-  const { ref: sectionRef, inView: sectionIsVisible } = useInView();
-
   return (
-    <m.div
-      // className={styles.contact}
+    <m.section
       ref={sectionRef}
-      className={`${styles.contact}  ${
-        headingIsVisible ? styles.animateSection : ""
-      }`}
+      className={styles.contact}
       id="contact"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.85, ease: "easeOut" }}
+      initial={{ opacity: 0, y: 32 }}
+      animate={sectionIsVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.75, ease: "easeOut" }}
     >
-      <div className={styles["contact-pattern"]}></div>
-
-      <div className={styles["contact-wrapper"]}>
-        <div className={styles["contact-left"]}>
-          <h1
-            className={styles.contactHeading}
-            // ref={headingRef}
-            // className={`${styles.contactHeading}  ${
-            //   headingIsVisible ? styles.animateHeading : ""
-            // }`}
-          >
-            Contact & Connect
-          </h1>
+      <div className={styles.contactWrapper}>
+        <div className={styles.contactLeft}>
+          <p className={styles.eyebrow}>Contact Me</p>
+          <h2 className={styles.contactHeading}>Let&apos;s build something useful.</h2>
+          <p className={styles.lede}>
+            I&apos;m open to product collaborations, freelance work, internships,
+            and thoughtful conversations around technology, startups, Agriculture , Business and AI.
+          </p>
 
           <div className={styles.socials}>
-            {/* <h2>Socials</h2> */}
-            <div>
+            {socials.map((social) => (
               <a
-                href="https://twitter.com/EthamFrancis"
-                target="_blank"
-                className={styles["icon"]}
-                style={{ backgroundColor: darkMode && "#333" }}
-              >
-                <FontAwesomeIcon icon={faTwitter} height={"17"} width={"17"} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/francis-etham-207202202/"
-                className={styles["icon"]}
+                key={social.label}
+                href={social.href}
                 target="_blank"
                 rel="noreferrer"
-                style={{ backgroundColor: darkMode && "#333" }}
+                aria-label={social.label}
               >
-                <FontAwesomeIcon
-                  icon={faLinkedin}
-                  className="icon"
-                  height={"17"}
-                  width={"17"}
-                />
+                <FontAwesomeIcon icon={social.icon} />
               </a>
-              <a
-                href="https://github.com/FrancoFrancis"
-                className={styles["icon"]}
-                target="_blank"
-                rel="noreferrer"
-                style={{ backgroundColor: darkMode && "#333" }}
-              >
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="icon"
-                  height={"17"}
-                  width={"17"}
-                />
-              </a>
-              {/* <a
-                href="https://francis123.hashnode.dev/"
-                className="icon"
-                target="_blank"
-                style={{ backgroundColor: darkMode && "#333" }}
-              >
-                <FontAwesomeIcon
-                  icon={faHashnode}
-                  className="icon"
-                  height={"17"}
-                  width={"17"}
-                />
-              </a> */}
-              <a
-                href="https://www.instagram.com/winnermanfrancis/"
-                className="icon"
-                target="_blank"
-                rel="noreferrer"
-                style={{ backgroundColor: darkMode && "#333" }}
-              >
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  className="icon"
-                  height={"17"}
-                  width={"17"}
-                />
-              </a>
-            </div>
+            ))}
           </div>
 
           <div className={styles.contactDetails}>
-            <h2>Got a project in mind? Say hello 👋🏽</h2>
-            {/* <h1 className={styles.sayHello}>
-              Say hello 👋🏽 <br />{" "}
-            </h1> */}
-
-            <span
-              style={{ color: darkMode && "#fff" }}
-              className={styles.email}
-            >
+            <a className={styles.email} href="mailto:francisetham01@gmail.com">
               francisetham01@gmail.com
-            </span>
+            </a>
 
-            <button
-              className={styles["resume-Button"]}
-              style={{ borderColor: darkMode ? "white" : "" }}
-            >
-              <a
-                href="/Francis-Resume.pdf"
-                download="Francis-Resume.pdf"
-                // className="resumeButton"
-              >
-                Download Resume
-              </a>
-            </button>
+            <a className={styles.resumeButton} href="/FRANCIS-ETHAM-ISHAKU-Resume 2026.pdf" download="FRANCIS-ETHAM-ISHAKU-Resume 2026.pdf">
+              Download Resume
+            </a>
 
-            <h2 className={styles.phone}>
-              <FontAwesomeIcon
-                style={{
-                  backgroundColor: darkMode ? "#333" : "",
-                  color: darkMode ? "#fff" : "",
-                }}
-                className={styles.phoneIcon}
-                color="#fff"
-                icon={faPhone}
-                height={"13"}
-                width={"13"}
-              />
-              <span>+(234)8105148453</span>
-            </h2>
+            <p>
+              <FontAwesomeIcon icon={faPhone} />
+              +(234) 810 514 8453
+            </p>
 
-            <h2 className={styles.location}>
-              <FontAwesomeIcon
-                className={styles.locationIcon}
-                style={{
-                  backgroundColor: darkMode ? "#333" : "",
-                  color: darkMode ? "#fff" : "",
-                }}
-                color=" #fff"
-                icon={faLocationDot}
-                height={"13"}
-                width={"13"}
-              />
-              <span>Abuja, Nigeria.</span>
-            </h2>
+            <p>
+              <FontAwesomeIcon icon={faLocationDot} />
+              Abuja, Nigeria
+            </p>
           </div>
         </div>
 
-        {/* RIGHT */}
-        <div className={styles["contact-right"]}>
-          <p className={styles["desc"]}>
-            I am interested in internships and freelance opportunities - However
-            if you have other <br /> suggestions, requests or questions, there you go,
-            contact me using the form below 😎
-          </p>
-
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            className={styles["contact-form"]}
-          >
+        <div className={styles.contactRight}>
+          <form ref={form} onSubmit={sendEmail} className={styles.contactForm}>
             <input
-              style={{
-                backgroundColor: darkMode && "#333",
-                color: darkMode && "#fff",
-              }}
               type="text"
               placeholder="Name"
               name="user_name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
-
             <input
-              style={{
-                backgroundColor: darkMode && "#333",
-                color: darkMode && "#fff",
-              }}
               type="text"
               placeholder="Subject"
               name="user_subject"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
+              required
             />
             <input
-              style={{
-                backgroundColor: darkMode && "#333",
-                color: darkMode && "#fff",
-              }}
               type="email"
               placeholder="Email"
               name="user_email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <textarea
-              className={styles.textarea}
-              cols="30"
-              rows="5"
+              rows="6"
               name="message"
               placeholder="Message"
-              style={{
-                backgroundColor: darkMode && "#333",
-                color: darkMode && "#fff",
-              }}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-            ></textarea>
+              required
+            />
 
-            <button
-              onClick={sendEmail}
-              style={{
-                borderColor: darkMode && "#fff",
-                background: darkMode && "transparent",
-                color: darkMode && "white",
-                hover: darkMode && "",
-              }}
-            >
+            <button type="submit">
               <span>Shoot</span>
-              <FontAwesomeIcon
-                icon={faArrowRight}
-                height={"16"}
-                width={"16"}
-                className="arrow-right"
-              />
+              <FontAwesomeIcon icon={faArrowRight} />
             </button>
           </form>
-          {showMessage && (
-            <div className={styles.popup}>
-              <p>
-                <FontAwesomeIcon icon={<faCircleCheck />} />
-                <br />
-                
-                Thanks for reaching out <br /> I'll get back to you ASAP
-              </p>
 
-            
+          {showMessage && (
+            <div className={styles.popup} role="status" aria-live="polite">
+              <FontAwesomeIcon icon={faCheckCircle} />
+              <p>Thanks for reaching out. I&apos;ll get back to you ASAP.</p>
             </div>
           )}
         </div>
-      
       </div>
-    </m.div>
+    </m.section>
   );
 };
 
-// export default Contact;
 export default dynamic(() => Promise.resolve(Contact), { ssr: false });

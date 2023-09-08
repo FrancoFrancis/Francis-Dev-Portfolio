@@ -1,13 +1,9 @@
 "use client";
 
-import styles from "./about.module.css";
-import { pattern1 } from "@/images";
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {
   faBootstrap,
-  faCss3,
   faDocker,
   faFigma,
   faGit,
@@ -16,155 +12,78 @@ import {
   faNodeJs,
   faReact,
   faSass,
+  faCss3,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { faRobot } from "@fortawesome/free-solid-svg-icons";
 import { motion as m } from "framer-motion";
-import { useRef, useEffect, useState, useContext } from "react";
 import { useInView } from "react-intersection-observer";
-import { ThemeContext } from "../../../context";
-import dynamic from "next/dynamic";
+import styles from "./about.module.css";
+
+const skills = [
+  { label: "React / Next.js", icon: faReact },
+  { label: "JavaScript", icon: faJs },
+  { label: "TypeScript mindset", icon: faRobot },
+  { label: "Sass + CSS", icon: faSass },
+  { label: "HTML5", icon: faHtml5 },
+  { label: "Node.js", icon: faNodeJs },
+  { label: "Git", icon: faGit },
+  { label: "Tailwind CSS", icon: faBootstrap },
+  { label: "Figma", icon: faFigma },
+  { label: "Docker", icon: faDocker },
+  { label: "CSS", icon: faCss3 },
+  { label: "Github", icon: faGithub },
+];
+
 
 const About = () => {
-  // const { ref: myRef, inView: myElementIsVisible } = useInView();
-  const { ref: headingRef, inView: headingIsVisible } = useInView();
-  const { ref: sectionRef, inView: sectionIsVisible } = useInView();
-
-  const theme = useContext(ThemeContext);
-  const darkMode = theme?.state?.darkMode;
+  const { ref: sectionRef, inView: sectionIsVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
   return (
-    <m.div
+    <m.section
       ref={sectionRef}
-      className={`${styles.about}  ${
-        headingIsVisible ? styles.animateSection : ""
-      }`}
+      className={styles.about}
       id="about"
-      initial={{ y: "100%" }}
-      animate={{ y: "0%" }}
-      exit={{ opacity: 1 }}
-      transition={{ duration: 0.85, ease: "easeOut" }}
+      initial={{ opacity: 0, y: 32 }}
+      animate={sectionIsVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      <div className={styles["about-left"]}>
-        <span className={styles.border} style={{ backgroundColor: darkMode && " #0e0d0d", borderColor: darkMode && "#333" }}>
-        <h1
-        className={styles.heading}
-          // ref={headingRef}
-          // className={`${styles.heading}  ${
-          //   headingIsVisible ? styles.animateHeading : ""
-          // }`}
-        >
-          About me
-        </h1>
-
-
-        <div>
-          <p className={styles.about - 1}>
-            Hi there! I'm Francis, a Front-end Web Developer based in Abuja,
-            Nigeria. My passion lies in crafting visually stunning and highly 
-            responsive user interfaces that are both aesthetically pleasing and
-            highly functional. I am a naturally curious & confident person
-            and I work on improving my developer skills one pixel at
-            a time. I'm an entrepreneur driven to create innovative tech solutions in Nigeria, Africa  and the world at large.
-          </p>
-
-          <br />
-          <p className={styles.about - 2}>
-            When I'm not coding or surfing the internet, you will finding me
-            writing music, reading books/e-books, watching tv series,
-            learning a new tool, working on my personal development or playing
-            basketball. I also enjoy writing articles on
-            <a
-              href="https://francis123.hashnode.dev/"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.hashnode}
-            >
-              {" "}
-              Hashnode.
-            </a>
-          </p>
-          <br />
+      <div className={styles.panel}>
+        <p className={styles.eyebrow}>About</p>
+        <h2 className={styles.heading}>Product-minded engineering for ambitious ideas.</h2>
+        <div className={styles.copy}>
           <p>
-            Lately I am happiest when creating, learning, thinking and exploring
-            how to make things better.
+            I&apos;m Francis — a Full-Stack Developer and Entrepreneur building technology products for the future. 
+            I specialize in creating modern web applications, scalable product systems, and AI-enhanced digital experiences/workflows that help startups move faster and businesses operate more efficiently. My approach goes beyond writing code; I think deeply about product strategy, user experience, performance, and execution—because great products aren’t just functional, they’re intuitive, trustworthy, and memorable.
           </p>
-          <Image src={pattern1} alt="Pattern1" className={styles["pattern2"]} />
+          <p>
+            Today, I’m focused on building impactful technology ventures while continuously exploring how AI and modern development tools can accelerate innovation. My mission is simple: create products that solve meaningful problems and contribute to a more innovative and prosperous future for Africa and the world.
+            speed, clarity, trust, and the confidence that a product was built with intent.
+          </p>
+          <p>
+            Outside of tech, I enjoy playing basketball and exploring music—both of which keep me creative, disciplined, and inspired in how I build and think. Whether I’m developing software, launching new ideas, or refining existing products, I’m driven by curiosity, continuous learning, and a commitment to building things that matter.
+          </p>
+        
         </div>
-        {/* border 2*/}
-        </span>
       </div>
 
-      <div className={styles.aboutRight}>
-        <span className={styles.border} style={{ backgroundColor: darkMode && " #0e0d0d", borderColor: darkMode && "#333" }}>
-       
-        <div
-          ref={sectionRef}
-          className={`${styles.skills}  ${
-            headingIsVisible ? styles.animateSection : ""
-          }`}
-        >
-           
-          <h1
-          className={styles.heading}
-            // ref={headingRef}
-            // className={`${styles.heading}  ${
-            //   headingIsVisible ? styles.animateHeading : ""
-            // }`}
-          >Skillset
-            {/* &lt;Skillset/&gt; */}
-          </h1>
-          <p>
-            <FontAwesomeIcon icon={faReact} height={"20"} width={"20"} /> 
-            
-            <span
-            style={{ backgroundColor: darkMode && "#3d3d3d" }}
-            
-            > React / Next.js</span>
-           
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faJs} height={"20"} width={"20"} />{" "}
-            <span style={{ backgroundColor: darkMode && "#3d3d3d" }}>JavaScript</span>
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faSass} height={"20"} width={"20"} /> 
-            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}> SASS +  CSS </span>
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faHtml5} height={"20"} width={"20"} />
-            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}>HTML5</span>
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faRobot} height={"20"} width={"20"} />{" "}
-            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}>ChatGPT</span>
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faNodeJs} height={"20"} width={"20"} />{" "}
-            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}>NodeJs</span>
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faGit} height={"20"} width={"20"} /> 
-            <span style={{ backgroundColor: darkMode &&  "#3d3d3d"}}>Git</span>
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faBootstrap} height={"20"} width={"20"} />{" "}
-            <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}>TailWinds</span>
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faFigma} height={"20"} width={"20"} />
-            <span color="red" style={{ backgroundColor: darkMode &&  "#3d3d3d" }}> Figma</span>
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faDocker} height={"20"} width={"20"} />{" "}
-           <span style={{ backgroundColor: darkMode &&  "#3d3d3d" }}> Docker</span>
-          </p>
-         
+      <div className={styles.panel}>
+        <p className={styles.eyebrow}>Skillset</p>
+        <h2 className={styles.heading}>Modern tools</h2>
+        <div className={styles.skills}>
+          {skills.map((skill) => (
+            <span key={skill.label} className={styles.skill}>
+              <FontAwesomeIcon icon={skill.icon} />
+              {skill.label}
+            </span>
+          ))}
         </div>
-        </span>
       </div>
-    </m.div>
+    </m.section>
   );
 };
 
-// export default About;
-export default dynamic (() => Promise.resolve(About), {ssr: false}  )
+export default dynamic(() => Promise.resolve(About), { ssr: false });

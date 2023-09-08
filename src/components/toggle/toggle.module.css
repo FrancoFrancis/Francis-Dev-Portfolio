@@ -1,36 +1,94 @@
-
-.toggle {
-    width: 65px;
-    height: 40px;
-    border-radius: 40px;
-    border: 1px solid rgb(111, 111, 111);
-    position: fixed;
-    top: 20px;
-    right: 3rem;
-    z-index: 98;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    /* padding: 1px 3px; */
-    backdrop-filter: blur(2.62px);
+.container {
+  position: fixed;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 32px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
 }
 
-.Icons{
-    width: 20px;
-    height: 20px;
-    margin: 0 2px;
-    color: var(--main-color);
-    
-
+.logo {
+  font-size: 1.55rem;
+  font-weight: 820;
+  color: var(--accent-strong);
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-.toggle-button {
-    width: 23.5px;
-    height: 23.5px;
-    border-radius: 30px;
-    background-image: url("../../images/pattern1.webp");
-    background-size: cover;
-    cursor: pointer;
-    margin: 0 3px;
-   
+.track {
+  width: 70px;
+  height: 38px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  gap: 8px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(16px);
+  cursor: pointer;
+  transition: background 240ms ease, border-color 240ms ease, transform 240ms ease;
+}
+
+.track:hover {
+  transform: translateY(-1px);
+}
+
+.track:focus-visible {
+  outline: 2px solid rgba(109, 84, 255, 0.22);
+  outline-offset: 3px;
+}
+
+.iconLeft,
+.iconRight {
+  width: 16px;
+  height: 16px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconLeft {
+  margin-left: 5px;
+}
+
+.iconRight {
+  margin-right: 5px;
+}
+
+.thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffffff, #f5f5f8);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.16);
+  transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1), background 220ms ease;
+}
+
+:root.dark .track {
+  background: rgba(15, 16, 24, 0.82);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:root.dark .thumb {
+  background: linear-gradient(180deg, #1f1b2e, #10101a);
 }

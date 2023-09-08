@@ -1,20 +1,13 @@
-import styles from "./footer.module.css";
 import dynamic from "next/dynamic";
-
 import React from "react";
+import styles from "./footer.module.css";
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
-      <div className={styles.footerPattern}></div>
-      <p>
-        
-        © Francis Etham 2023 All Rights Reserved
-      </p>
-      <span className={styles.behind}></span>
-    </div>
+    <footer className={styles.footer}>
+      <p>© Francis Etham 2026. Built with intent in Nigeria.</p>
+    </footer>
   );
 };
 
-// export default Footer;
-export default dynamic (() => Promise.resolve(Footer), {ssr: false}  )
+export default dynamic(() => Promise.resolve(Footer), { ssr: false });

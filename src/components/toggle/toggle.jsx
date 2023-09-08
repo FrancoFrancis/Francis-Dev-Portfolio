@@ -5,63 +5,41 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../../../context";
 import styles from "./toggle.module.css";
-import { riseWithFade } from "../../../utils/utils";
 import dynamic from "next/dynamic";
 
 const Toggle = () => {
   const theme = useContext(ThemeContext);
-  const [isMounted, setIsMounted] = useState(true);
+  const dark = theme?.state?.darkMode;
+  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  useEffect(() => setMounted(true), []);
 
-  const handleClick = () => {
-    theme?.dispatch({ type: "TOGGLE" });
-    console.log("clicked toggle");
-  };
+  const handleClick = () => theme?.dispatch({ type: "TOGGLE" });
 
   return (
-    <div
-      className={styles["toggle"]}
-      variants={riseWithFade}
-      initial="initial"
-      animate="animate"
-    >
-      <FontAwesomeIcon
-        color="orangered"
-        icon={faSun}
-        className={styles.Icons}
-        alt="toggle icon"
-        height={"14"}
-        width={"14"}
-      />
-      {/* <FontAwesomeIcon
-        icon={faMoon}
-        className={styles.Icons}
-        alt="toggle icon"
-        height={"16"}
-        width={"16"}
-      /> */}
-      {/* <span
-       
-        className={styles.Icons}
-        alt="toggle icon"
-        height={"16"}
-        width={"16"}
+    <div className={styles.container}>
+      <span className={styles.logo}>WF.</span>
+      <button
+        aria-pressed={!!dark}
+        aria-label={dark ? "Switch to light theme" : "Switch to dark theme"}
+        className={styles.track}
+        onClick={handleClick}
       >
-        🌗
-      </span> */}
-      {isMounted && (
-        <div
-          className={styles["toggle-button"]}
-          onClick={handleClick}
-          style={{ left: theme?.state?.darkMode ? 0 : 25 }}
-        ></div>
-      )}
+        <span className={styles.iconLeft} aria-hidden>
+          <FontAwesomeIcon icon={faSun} />
+        </span>
+        <span className={styles.iconRight} aria-hidden>
+          <FontAwesomeIcon icon={faMoon} />
+        </span>
+        {mounted && (
+          <span
+            className={styles.thumb}
+            style={{ transform: dark ? "translateX(28px)" : "translateX(2px)" }}
+          />
+        )}
+      </button>
     </div>
   );
 };
 
-// export default Toggle;
-export default dynamic (() => Promise.resolve(Toggle), {ssr: false}  )
+export default dynamic(() => Promise.resolve(Toggle), { ssr: false });
