@@ -19,8 +19,8 @@ const techItems = [
 
 const Intro = () => {
   return (
-    <m.section
-      id="intro"
+    <m.section 
+      id="intro" 
       className={styles.hero}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -36,7 +36,7 @@ const Intro = () => {
           FULLSTACK DEVELOPER • ENTREPRENEUR
         </m.span>
 
-        <m.h1
+        <m.h3
           className={styles.headline}
           initial={{ y: 18, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -46,7 +46,7 @@ const Intro = () => {
           <br />
           I build innovative tech solutions for a brighter future in{" "}
           <span className={styles.highlight}>Africa 🚀</span>.
-        </m.h1>
+        </m.h3>
 
         <m.p
           className={styles.description}
