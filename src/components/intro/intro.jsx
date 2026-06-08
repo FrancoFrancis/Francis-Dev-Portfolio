@@ -5,7 +5,7 @@ import Image from "next/image";
 import React from "react";
 import { motion as m } from "framer-motion";
 import { Link } from "react-scroll";
-import { winnerman2026 } from "@/images";
+import { winnerman2026} from "@/images";
 import styles from "./intro.module.css";
 
 const techItems = [
@@ -44,7 +44,8 @@ const Intro = () => {
         >
           Hello there, I&apos;m <span className={styles.name}>Francis</span>.
           <br />
-          I build innovative tech solutions for a brighter future in{" "}
+          I build innovative tech solutions for 
+          a brighter future in{" "}
           <span className={styles.highlight}>Africa 🚀</span>.
         </m.h3>
 
@@ -71,7 +72,7 @@ const Intro = () => {
             duration={500}
             className={styles.primaryButton}
           >
-            View My Work
+            Hire Me
           </Link>
           <Link
             to="contact"
@@ -80,7 +81,9 @@ const Intro = () => {
             duration={500}
             className={styles.secondaryButton}
           >
-            Let&apos;s Connect
+            {/* Let&apos;s Connect */}
+            
+            View My Work
           </Link>
         </m.div>
 
@@ -91,7 +94,7 @@ const Intro = () => {
           transition={{ delay: 0.26, duration: 0.7, ease: "easeOut" }}
         >
           <span aria-hidden="true" />
-          Based in Abuja Nigeria — Available worldwide
+          📍Based in Abuja Nigeria — Available worldwide
         </m.p>
         <m.p
           className={styles.availability}

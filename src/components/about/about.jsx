@@ -14,6 +14,7 @@ import {
   faSass,
   faCss3,
   faGithub,
+  faMicrosoft,
 } from "@fortawesome/free-brands-svg-icons";
 import { faRobot } from "@fortawesome/free-solid-svg-icons";
 import { motion as m } from "framer-motion";
@@ -33,8 +34,12 @@ const skills = [
   { label: "Docker", icon: faDocker },
   { label: "CSS", icon: faCss3 },
   { label: "Github", icon: faGithub },
+  { label: "Microsoft Word", icon: faMicrosoft },
+  { label: "Microsoft Excel", icon: faMicrosoft },
+  { label: "Canva", icon: faFigma },
+  { label: "Gemini (AI)", icon: faRobot },
+  { label: "ChatGPT", icon: faRobot },
 ];
-
 
 const About = () => {
   const { ref: sectionRef, inView: sectionIsVisible } = useInView({
@@ -64,7 +69,7 @@ const About = () => {
             speed, clarity, trust, and the confidence that a product was built with intent.
           </p>
           <p>
-            Outside of tech, I enjoy playing basketball and exploring music—both of which keep me creative, disciplined, and inspired in how I build and think. Whether I’m developing software, launching new ideas, or refining existing products, I’m driven by curiosity, continuous learning, and a commitment to building things that matter.
+            Outside of tech, I enjoy playing basketball and exploring music—both of which keep me creative, disciplined, and inspired on how I build and think. Whether I’m developing software, launching new ideas, or refining existing products, I’m driven by curiosity, continuous learning, and a commitment to building things that matter.
           </p>
         
         </div>
