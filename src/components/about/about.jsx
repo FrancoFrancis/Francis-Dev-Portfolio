@@ -61,15 +61,17 @@ const About = () => {
         <h2 className={styles.heading}>Product-minded engineering for ambitious ideas.</h2>
         <div className={styles.copy}>
           <p>
-            I&apos;m Francis — a Full-Stack Developer and Entrepreneur building technology products for the future. 
-            I specialize in creating modern web applications, scalable product systems, and AI-enhanced digital experiences/workflows that help startups move faster and businesses operate more efficiently. My approach goes beyond writing code; I think deeply about product strategy, user experience, performance, and execution—because great products aren’t just functional, they’re intuitive, trustworthy, and memorable.
+            I&apos;m Francis — I am a Full-Stack Developer and Entrepreneur with a foundation in Accounting, building technology products for the future. I specialize in creating modern web applications, scalable product systems, and AI-enhanced workflows that help startups move faster and businesses operate more efficiently.
           </p>
           <p>
-            Today, I’m focused on building impactful technology ventures while continuously exploring how AI and modern development tools can accelerate innovation. My mission is simple: create products that solve meaningful problems and contribute to a more innovative and prosperous future for Africa and the world.
-            speed, clarity, trust, and the confidence that a product was built with intent.
+            My BSc in Accounting gives me a distinct edge in software development: I don’t just write code; I understand the financial logic, compliance, and operational metrics that drive a business. This allows me to architect systems that are not only technically sound but also commercially viable and financially scalable.
+
+My approach goes beyond syntax; I think deeply about product strategy, user experience, and execution. Because great products aren’t just functional—they’re intuitive, trustworthy, and built with intent.
           </p>
           <p>
-            Outside of tech, I enjoy playing basketball and exploring music—both of which keep me creative, disciplined, and inspired on how I build and think. Whether I’m developing software, launching new ideas, or refining existing products, I’m driven by curiosity, continuous learning, and a commitment to building things that matter.
+            Today, I’m focused on building impactful and innovative technology ventures while exploring how AI can accelerate innovation. My mission is simple: create products that solve meaningful problems and contribute to a more prosperous future for Africa and the world.
+
+Outside of tech, I enjoy playing basketball and exploring music—both of which keep me creative and disciplined. Whether I’m developing software or refining product strategy, I’m driven by curiosity and a commitment to building things that matter
           </p>
         
         </div>
